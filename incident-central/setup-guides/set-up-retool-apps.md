@@ -52,11 +52,11 @@ Finally, let's hook up the links to our apps in the `Incident-Navbar`.
 4. Go to the "Incident-Central" folder. Click the "Edit" button to the right of the `Incident-Navbar` Module to open the editor view.
 5. Within the UI editor canvas, click on the 'navigation' component on the screen. You should see the details of this component appear in the right-hand sidebar.
 6. Look in the right-hand sidebar for the "Menu items" detail, with "Home" and "Incident Details" listed. Click on each of these menu items, and adjust its "App to Open" to be the appropriate app.
-<br/><img src="./images/adjust-navbar-link.png" alt="Setting up the PagerDuty resource" style="height: 500px;">
+<br/><img src="./images/adjust-navbar-link.png" alt="Adjusting the navigation bar menu items" style="height: 500px;">
 
 7. Now, within the UI editor canvas, click on the "Report Incident" button component.
 8. Look in the right-hand sidebar for the "Event handlers" detail. Click on the one event handler, and adjust the "App" that will be opened.
-<br/><img src="./images/adjust-report-incident-link.png" alt="Setting up the PagerDuty resource" style="height: 500px;">
+<br/><img src="./images/adjust-report-incident-link.png" alt="Adjusting the app to be opened" style="height: 500px;">
 
 ## Step 5.4 - Fill in your Slack Team ID
 There is one place in Incident Central where we use your Slack Team ID as a hardcoded value. This is the simplest way to get this value (which in most cases stays the same).
@@ -65,7 +65,7 @@ There is one place in Incident Central where we use your Slack Team ID as a hard
 10. Click the "..." button in the upper right. Select "Scripts and styles" from the dropdown.
 11. A modal will open. Select the "JavaScript" tab.
 12. At the top of the code here, you'll see a place to fill in your Slack Team ID as a constant.
-<br/><img src="./images/fill-in-slack-team-id.png" alt="Setting up the PagerDuty resource" style="height: 200px;">
+<br/><img src="./images/fill-in-slack-team-id.png" alt="Filling in the Slack Team ID" style="height: 200px;">
 13. Click "Save".
 
 ## Step 5.5 - Test it out

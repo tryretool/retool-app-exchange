@@ -53,7 +53,7 @@ Authorization: Bearer <your token>
 ```
 4. Click "Save changes".
 
-<img src="./images/slack-api-resource.png" alt="Setting up the PagerDuty resource" style="height: 500px;">
+<img src="./images/slack-api-resource.png" alt="Setting up the Slack resource" style="height: 500px;">
 
 
 ## Step 4.3 - Create the "Incident Database" Resource

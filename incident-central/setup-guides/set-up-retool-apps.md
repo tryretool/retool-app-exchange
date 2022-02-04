@@ -19,11 +19,12 @@ The goal of this section is:
 
 
 ## Step 5.1 - Download the app "code"
-Go to the `/code` directory in this Github repo, and download the pieces of code there.
+In this step, you will obtain the code files in the `/code` directory in this Github repo.
 
-The fastest way to do this is to git-clone this Github repo:
-`git clone <>`
-(You can also manually click-to-download each file.)
+To do this, clone this Github repo:
+`git clone https://github.com/tryretool/retool-app-exchange.git`
+
+(Alternatively, you can manually click-to-download each file in the [`code/`](./code) directory.)
 
 You will have the following files:
 

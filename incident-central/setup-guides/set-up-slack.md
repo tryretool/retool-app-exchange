@@ -39,3 +39,6 @@ You now have the following items that you can plug into a later step:
 * Slack API key - this is the "Bot User OAuth Token" associated with your Slack app
 
 You also have a Slack workspace in which a new Slack channel will be opened whenever an incident is triggered through Incident Central. Incident Central will autogenerate a unique, human-readable name for the incident, and give the Slack channel the same name. Incident Central will also add the oncall person (as defined by PagerDuty) and incident reporter to this new channel.
+
+## Next step
+[Step-by-step: Set up a database](./set-up-database.md)

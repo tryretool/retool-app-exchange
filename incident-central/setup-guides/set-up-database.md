@@ -60,3 +60,6 @@ If you would like to do this:
 
 ## Summary
 You now have a database with an `incidents` table that Incident Central can write to.
+
+## Next step
+[Step-by-step: Set up Retool Resources](./set-up-retool-resources.md)

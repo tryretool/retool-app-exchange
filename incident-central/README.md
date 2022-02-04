@@ -72,7 +72,7 @@ Here's the link again: [Setup Guides folder](./setup-guides)
 * Do you want other things to happen when someone reports an incident? (Perhaps, you want a Jira ticket to be created, and a Google Doc to be spun up?) You can extend the Report Incident page to also do these things (e.g. by adding calls to Jira and Google APIs.)
 
 ### How to contribute
-For now, please open a Github Issue on this repo, and let us know about your interest in contributing! Please feel free to do this before you get started.
+Please open a Github Issue on this repo, and let us know about your interest in contributing! We encourage you to reach out before you get started building to get early feedback.
 
 ## Appendix
 

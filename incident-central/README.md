@@ -78,7 +78,6 @@ As an overview, these guides will take you through:
 2. Setting up these backends as Resources in Retool.
 3. Downloading and configuring the Retool app files.
 
-Here's the link again: [Setup Guides folder](./setup-guides)
 
 ## What's next?
 ### Ideas for extending this app

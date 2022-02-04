@@ -42,3 +42,6 @@ You now have the following items that you can plug into a later step:
 * PagerDuty API key
 
 You also have a "service" within PagerDuty that you want to be able to trigger an incident on, and this service has an "escalation policy" that defines who will get notified when an incident starts.
+
+## Next step
+[Step-by-step: Set up Slack](./set-up-slack.md)

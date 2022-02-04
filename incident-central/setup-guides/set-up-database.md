@@ -55,8 +55,11 @@ An easy way to run these commands on your database is to connect your database t
 
 If you would like to do this:
 * First, go through Step 4: Retool Resources to get this database connected to Retool (as the "Incident Database" resource).
-* Upload the `Database-Setup` Retool app provided in [the `code/extras` subdirectory](./code/extras/) into your Retool instance. To do this, download the code, and go to the homepage of Retool and click "Create new"  → "Import an app".
+* Upload the `Database-Setup` Retool app provided in [the `code/extras` subdirectory](../code/extras/) into your Retool instance. To do this, download the code, and go to the homepage of Retool and click "Create new"  → "Import an app".
 * Open the `Database-Setup` app in **_Edit_** mode, and manually click to run the two Queries (shown in the bottom panel of the Editor view) in the app.
 
 ## Summary
 You now have a database with an `incidents` table that Incident Central can write to.
+
+## Next step
+[Step-by-step: Set up Retool Resources](./set-up-retool-resources.md)

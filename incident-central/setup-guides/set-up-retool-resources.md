@@ -84,3 +84,6 @@ You now have three Resources defined in Retool, with the following names:
 Reminder: The names here are important! The app code we provide expects the Resources to have these names. (You can choose to rename them, after you've finished setting everything up.)
 
 Now, we are ready to import our apps!
+
+## Next step
+[Step-by-step: Set up Retool Apps](./set-up-retool-apps.md)

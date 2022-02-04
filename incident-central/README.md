@@ -1,5 +1,8 @@
 # Incident Central - An incident response hub for engineering teams
 
+<p align="center">
+<img src="./images/incident-central-demo.gif" alt="Incident Central demo gif" style="width: 600px;">
+</p>
 
 ## Why you need this
 In any engineering organization, things will go wrong. No matter what kind of product you're building, what size you are, or how hard you try, something will break.
@@ -7,7 +10,6 @@ In any engineering organization, things will go wrong. No matter what kind of pr
 You'll want to develop a robust incident response process, as well as supporting tools to empower people to use the process. For example, a tool can make it easy to report an incident, alert the right people to respond, and give responders a communication channel to collaborate to solve the problem.
 
 In addition, you want to be able to get a bird's-eye view of incidents—one place you can go to see a list of all open incidents. You also want to be able to find past incidents, in order to review them, reflect on them, and improve.
-
 
 ## What does Incident Central do?
 Incident Central is a ready-made app that lets you do these things:
@@ -23,6 +25,18 @@ Incident Central is a ready-made app that lets you do these things:
 In addition, you can build out any other incident-related functionality you want. (For example, you might decide that you want to also create a Jira ticket every time an incident is opened.)
 
 In the future, we will likely add a page that displays aggregate incident metrics. Stay tuned.
+
+## Screenshots
+<table>
+  <tr>
+    <td valign="top"><img src="./images/home-page.png"/></td>
+    <td valign="top"><img src="./images/incident-details.png"/></td>
+  </tr>
+  <tr>
+    <td valign="top"><img src="./images/report-incident.png"/></td>
+    <td valign="top"><img src="./images/report-incident-created.png"/></td>
+  </tr>
+</table>
 
 ### Who is this tool for?
 You likely want everyone (or most people) at your company to be able to report an incident. Thus, the Report Incident UI within Incident Central is designed to be used by anyone at your company.

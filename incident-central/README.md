@@ -90,7 +90,7 @@ Please open a Github Issue on this repo, and let us know about your interest in 
 ## Appendix
 
 ### Learn more about incident response process and tooling
-A blog post is coming soon!
+As part of the research in building this app, we interviewed an engineer who built incident response tools at Stripe. Check out the blog post: [From checklist to service: scaling Stripe’s incident response](https://retool.com/blog/incident-response-tools-stripe/)
 
 ### Citations
 [0] Five main steps in an incident management process: [Increment magazine](https://increment.com/on-call/when-the-pager-goes-off/)

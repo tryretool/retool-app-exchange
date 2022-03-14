@@ -7,24 +7,30 @@
 ## Why you need this
 This Retool app extends [Snowflake's Resource Optimization: Setup & Configuration Quickstart Guide](https://quickstarts.snowflake.com/guide/resource_optimization_setup/index.html?index=..%2F..index#0).
 
-Setup & Configuration queries provide more proactive insight into warehouses that are not utilizing key features that can prevent runaway resource and cost consumption. Leverage these key queries to identify warehouses which should be re-configured to leverage the appropriate features.
+The Resource Optimization Quickstart Guides are meant to help customers better monitor and manage their credit consumption. Setup & Configuration queries provide more proactive insight into warehouses that are not utilizing key features that can prevent runaway resource and cost consumption. Leverage these key queries to identify warehouses which should be re-configured to leverage the appropriate features.
 
 Retool builds on the Quickstart Guide by enabling you to take action from right within the tool - set auto-suspend or auto-resume for your warehouses, assign warehouses or users resource monitors, suspend or drop idle warehouses, disable or drop idle users or roles, etc.
 
-## What does Incident Central do?
-Incident Central is a ready-made app that lets you do these things:
-1. Anyone at your company (engineer or not) can report an incident via a simple user interface. When an incident is reported through Incident Central, the following things will happen:
-    - A unique human-readable incident name will be generated for the incident.
-    - The PagerDuty on-call rotation for the problematic service will be triggered, thus alerting the on-call.
-    - A Slack channel for incident response will be created.
-    - The information above about the incident will be written to a database that you provide, so that you have a means to look up current and past incidents.
+## What does Snowflake Resource Optimization: Setup & Configuration do?
+Snowflake Resource Optimization: Setup & Configuration is a ready-made app that lets you do these things:
+### Warehouses
+- Identify warehouses without auto-resume enabled and enable it
+- Identify warehouses without auto-suspend enabled and enable it for your chosen duration
+- Identify warehouses with long suspension and modify the auto-suspend setting
+- Identify warehouses without resource monitors and assign them where needed
+- Identify idle warehouses and suspend or drop them
+### Users
+- Review warehouses used by multiple roles and investigate relevant query metrics
+- Identify idle users and disable or drop them
+- Identify users who have never logged in and disable or drop them
+- Identify idle roles and drop them
+### Tasks
+- Identify failed tasks and show query history or drop them
+- Identify long running tasks and show query history or drop them
+### Else
+- Review account, warehouse, or user statement timeouts and modify them
+- Identify stale table streams and XXX
 
-2. You can see all open incidents, and quickly navigate to the relevant incident Slack channel.
-3. You can drill into a specific incident, and edit its metadata.
-
-In addition, you can build out any other incident-related functionality you want. (For example, you might decide that you want to also create a Jira ticket every time an incident is opened.)
-
-In the future, we will likely add a page that displays aggregate incident metrics. Stay tuned.
 
 ## Screenshots
 <table>

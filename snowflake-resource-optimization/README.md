@@ -9,7 +9,7 @@ This Retool app extends [Snowflake's Resource Optimization: Setup & Configuratio
 
 The Resource Optimization Quickstart Guides are meant to help customers better monitor and manage their credit consumption. Setup & Configuration queries provide more proactive insight into warehouses that are not utilizing key features that can prevent runaway resource and cost consumption. Leverage these key queries to identify warehouses which should be re-configured to leverage the appropriate features.
 
-Retool builds on the Quickstart Guide by enabling you to take action from right within the tool - set auto-suspend or auto-resume for your warehouses, assign warehouses or users resource monitors, suspend or drop idle warehouses, disable or drop idle users or roles, etc.
+Retool builds on the Quickstart Guide by enabling you to take action from right within the tool - set auto-suspend or auto-resume for your warehouses, suspend or drop idle warehouses, disable or drop idle users, etc.
 
 ## What does Snowflake Resource Optimization: Setup & Configuration do?
 Snowflake Resource Optimization: Setup & Configuration is a ready-made app that lets you do these things:
@@ -86,17 +86,5 @@ As an overview, these guides will take you through:
 
 
 ## What's next?
-### Ideas for extending this app
-* Do you use a different chat application instead of Slack? You can swap the Slack REST API calls in this app for calls to your chat application instead.
-* Do you want other things to happen when someone reports an incident? (Perhaps, you want a Jira ticket to be created, and a Google Doc to be spun up?) You can extend the Report Incident page to also do these things (e.g. by adding calls to Jira and Google APIs.)
-
 ### How to contribute
 Please open a Github Issue on this repo, and let us know about your interest in contributing! We encourage you to reach out before you get started building to get early feedback.
-
-## Appendix
-
-### Learn more about incident response process and tooling
-As part of the research in building this app, we interviewed an engineer who built incident response tools at Stripe. Check out the blog post: [From checklist to service: scaling Stripe’s incident response](https://retool.com/blog/incident-response-tools-stripe/)
-
-### Citations
-[0] Five main steps in an incident management process: [Increment magazine](https://increment.com/on-call/when-the-pager-goes-off/)

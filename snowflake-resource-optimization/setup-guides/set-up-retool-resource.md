@@ -1,4 +1,4 @@
-Snowflake Resource Optimization Setup - Step 2: Resources in Retool
+# Snowflake Resource Optimization Setup - Step 2: Resources in Retool
 
 ## What's a Resource in Retool?
 A Resource is a core concept in Retool. A Resource is a config that defines a backend data source that your Retool apps can talk to. Retool supports a variety of different kinds of backends, from databases to REST API calls, to special integrations like Stripe.

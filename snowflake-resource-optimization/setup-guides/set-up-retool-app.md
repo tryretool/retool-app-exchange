@@ -22,9 +22,9 @@ You will have the following file: `Snowflake-Resource-Optimization-Setup-Configu
 First, let's create a folder to put all of this code into, to keep things organized.
 1. On your Retool home page, click "Create new" → "Create a new folder". Give this folder a name you like, e.g. "Snowflake Resource Optimization".
 
-Now, let's import the app.
-    * Click "Create new" → "Import an app".
-    * Upload the `Snowflake-Resource-Optimization-Setup-Configuration.json` file, and select the folder you just created ("Snowflake Resource Optimization") as the destination.
+2. Now, let's import the app.
+   * Click "Create new" → "Import an app".
+   * Upload the `Snowflake-Resource-Optimization-Setup-Configuration.json` file, and select the folder you just created ("Snowflake Resource Optimization") as the destination.
 
 ## Step 3.3 - Test it out
 In this section, we're going to test out the functionality in your new app. Ideally, put yourself oncall for whichever service you want to send a test "incident" to in PagerDuty, so that you don't surprise someone else! (Or else, give the person who's oncall a heads-up that you are testing.)

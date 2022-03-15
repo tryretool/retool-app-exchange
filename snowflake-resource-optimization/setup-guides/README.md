@@ -15,5 +15,5 @@ As an overview, we'll go through the following steps:
 ## Step 2 - Set up your Snowflake database as a Resource in Retool
 [Step-by-step: Set up Retool Resource](./set-up-retool-resource.md)
 
-## Step 3 - Set up the Retool app files
+## Step 3 - Set up the Retool app file
 [Step-by-step: Set up Retool App](./set-up-retool-app.md)

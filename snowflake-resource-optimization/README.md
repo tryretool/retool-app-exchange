@@ -57,8 +57,8 @@ See the detailed setup guides in the [Setup Guides folder](./setup-guides).
 
 As an overview, these guides will take you through:
 
-1. Setting up backend dependency.
-2. Setting up this backend as a Resource in Retool.
+1. Setting up Snowflake.
+2. Setting up your Snowflake database as a Resource in Retool.
 3. Downloading and configuring the Retool app file.
 
 ### Application notes

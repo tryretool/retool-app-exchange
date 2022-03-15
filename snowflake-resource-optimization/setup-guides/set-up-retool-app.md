@@ -1,21 +1,11 @@
-# Incident Central Setup - Step 5: Apps in Retool
+# Snowflake Resource Optimization Setup - Step 3: Apps in Retool
 
 ## What's an App in Retool?
 As the name suggests, an App is a single "view" (or "page") that you can build in Retool. An App is built from a combination of Components to construct the UI, and Queries that define calls to your Resources. Queries can do reads or writes.
 
-## Why Incident Central is 3 Retool Apps
-
-To the end-user, Incident Central looks like a single, unified website. However, under the hood, it is 3 distinct Retool Apps.
-
-This is because Incident Central consists of three distinct "views", and I have chosen to make these views independent of each other, so that it's easy for anyone (including me!) to mix and match them and refactor them. Decoupling unrelated pieces of functionality is in general a good practice in programming.
-
-The three distinct Retool Apps are: a home page, an incident details view, and a Report Incident view.
-
-These three Apps are united by one common Navigation bar (implemented as a reusable [Module](https://docs.retool.com/docs/modules)) that sits in the header. This Navigation bar lets the end-user experience Incident Central as a single, unified website.
-
 ## Output
 The goal of this section is:
-* To get Incident Central into your Retool instance. 🚀
+* To get Snowflake Resource Optimization: Setup & Configuration into your Retool instance. 🚀
 
 
 ## Step 5.1 - Download the app "code"

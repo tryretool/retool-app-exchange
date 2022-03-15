@@ -31,8 +31,6 @@ In this section, we're going to test out the functionality in your new app. Plea
 
 Navigate to your "Snowflake Resource Optimization" folder, and click on the "Snowflake Resource Optimization: Setup & Configuration" app. Toggle through the application tabs (Warehouses, Users, Tasks, Else), review query results, and try out a couple of actions, e.g.: 
 - Set auto-resume for a warehouse without it
-- Suspend an idle warehouse
-- Create a Slack channel and add you and the oncall person to it.
 - Disable a user who has never logged in
 - etc.
 

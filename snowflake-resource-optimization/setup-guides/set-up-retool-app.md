@@ -27,15 +27,14 @@ First, let's create a folder to put all of this code into, to keep things organi
    * Upload the `Snowflake-Resource-Optimization-Setup-Configuration.json` file, and select the folder you just created ("Snowflake Resource Optimization") as the destination.
 
 ## Step 3.3 - Test it out
-In this section, we're going to test out the functionality in your new app. Ideally, put yourself oncall for whichever service you want to send a test "incident" to in PagerDuty, so that you don't surprise someone else! (Or else, give the person who's oncall a heads-up that you are testing.)
+In this section, we're going to test out the functionality in your new app. Please be aware that you can use this app to make irreversible changes (e.g. drop a warehouse or user).
 
-Navigate to your "Incident-Central" folder, and click on the "Report-Incident" app. Choose a service to create a "test" incident for, and fill out the form. This should:
-- Page the person who is oncall via PagerDuty.
+Navigate to your "Snowflake Resource Optimization" folder, and click on the "Snowflake Resource Optimization: Setup & Configuration" app. Toggle through the application tabs (Warehouses, Users, Tasks, Else), review query results, and try out a couple of actions, e.g.: 
+- Set auto-resume for a warehouse without it
+- Suspend an idle warehouse
 - Create a Slack channel and add you and the oncall person to it.
-
-Now, click on the "Home" menu item in the navbar to open the Incident Central "Home" page. You should see the new incident listed.
-
-Now, click on "View details" for this incident. You should see the details view load for this incident.
+- Disable a user who has never logged in
+- etc.
 
 ## Summary
 

@@ -1,7 +1,7 @@
 # Snowflake Resource Optimization: Setup & Configuration
 
 <p align="center">
-<img src="./images/incident-central-demo.gif" alt="Incident Central demo gif" style="width: 600px;">
+<img src="./images/setup-config-demo.gif" alt="Incident Central demo gif" style="width: 600px;">
 </p>
 
 ## Why you need this

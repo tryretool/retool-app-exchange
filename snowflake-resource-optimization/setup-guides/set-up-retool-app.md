@@ -16,11 +16,7 @@ To do this, clone this Github repo:
 
 (Alternatively, you can manually click-to-download the file in the [`code/`](./code) directory.)
 
-You will have the following file:
-
-```
-- Snowflake-Resource-Optimization-Setup-Configuration.json
-```
+You will have the following file: `Snowflake-Resource-Optimization-Setup-Configuration.json`.
 
 ## Step 3.2 - Import the app "code"
 First, let's create a folder to put all of this code into, to keep things organized.

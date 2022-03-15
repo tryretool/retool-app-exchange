@@ -50,9 +50,9 @@ This tool will enable users to make irreversible changes, such as dropping wareh
 ## Technical Details and Setup
 ### Dependencies - backends
 The Snowflake Resource Utilization: Setup & Configuration app depends on the following backend services:
-* Snowflake
+- Snowflake
 
-### How to set up Incident Central in your Retool instance
+### How to set up Snowflake Resource Optimization: Setup & Configuration in your Retool instance
 See the detailed setup guides in the [Setup Guides folder](./setup-guides).
 
 As an overview, these guides will take you through:
@@ -60,6 +60,11 @@ As an overview, these guides will take you through:
 1. Setting up backend dependency.
 2. Setting up this backend as a Resource in Retool.
 3. Downloading and configuring the Retool app file.
+
+### Application notes
+Please find some relevant considerations below:
+- In the [Snowflake's Resource Optimization: Setup & Configuration Quickstart Guide](https://quickstarts.snowflake.com/guide/resource_optimization_setup/index.html?index=..%2F..index#0), the Idle Users, Users Never Logged In, and Idle Roles queries leverage the [ACCOUNT_USAGE](https://docs.snowflake.com/en/sql-reference/account-usage.html) schema. The Retool app, however, uses Snowflake DDL (e.g. SHOW USERS;) to avoid the latency associated with the ACCOUNT_USAGE schema. This means that you are able to review and update users and roles as soon as they are created in Snowflake. It also means that these queries do not show deleted users or roles.
+- The Failed Task and Long Running Tasks queries can take a long time to run. Feel free to modify them using [Snowflake's recommendations](https://docs.snowflake.com/en/sql-reference/account-usage/task_history.html#usage-notes) as needed.  
 
 
 ## What's next?

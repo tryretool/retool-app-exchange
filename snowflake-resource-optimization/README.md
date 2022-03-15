@@ -44,45 +44,22 @@ Snowflake Resource Optimization: Setup & Configuration is a ready-made app that 
   </tr>
 </table>
 
-### Who is this tool for?
-You likely want everyone (or most people) at your company to be able to report an incident. Thus, the Report Incident UI within Incident Central is designed to be used by anyone at your company.
-
-Members of the engineering team will likely use the other functionality: looking up, editing, and reviewing incident data.
-
-### Where does this tool fits into the incident response process?
-There are five main steps in an incident management process [0]:
-1. Triage
-2. Coordinate
-3. Mitigate
-4. Resolve
-5. Follow-Up
-
-In Incident Central, the "Report Incident" UI will help kick off Step 1: "Triage", by alerting the right people. It will also set up a communication channel for people to do Step 2: "Coordinate."
-
-During an incident ("Coordinate"-"Resolve"), people can go to Incident Central to find the link to the incident communication channel and other metadata.
-
-After an incident, you can use Incident Central to look up information about the incident, as part of Step 5: "Follow-Up."
-
+## Who is this tool for?
+This tool will enable users to make irreversible changes, such as dropping warehouses, users, roles, or tasks. It is set up to leverage the [ACCOUNTADMIN](https://docs.snowflake.com/en/user-guide/security-access-control-considerations.html#using-the-accountadmin-role) role, and as such should only be used by Snowflake administrators who are trusted to make such changes.
 
 ## Technical Details and Setup
 ### Dependencies - backends
-The initial version of Incident Central depends on the following backend services:
-* Slack
-* PagerDuty
-* A database (e.g. PostgreSQL or MySQL)
-
-You are welcome to adapt Incident Central to an alternative backend (for example, perhaps Microsoft Teams instead of Slack). We encourage you to submit your modified version of the app here for others to use. See the **"How to contribute"** section below.
+The Snowflake Resource Utilization: Setup & Configuration app depends on the following backend services:
+* Snowflake
 
 ### How to set up Incident Central in your Retool instance
 See the detailed setup guides in the [Setup Guides folder](./setup-guides).
 
 As an overview, these guides will take you through:
 
-1. Setting up backend dependencies.
-    - Configuring your Slack and PagerDuty instances.
-    - Creating a relational database, if you don't have one already.
-2. Setting up these backends as Resources in Retool.
-3. Downloading and configuring the Retool app files.
+1. Setting up backend dependency.
+2. Setting up this backend as a Resource in Retool.
+3. Downloading and configuring the Retool app file.
 
 
 ## What's next?

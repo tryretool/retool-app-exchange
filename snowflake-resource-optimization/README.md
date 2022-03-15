@@ -63,7 +63,7 @@ As an overview, these guides will take you through:
 
 ### Application notes
 Please find some relevant considerations below:
-- In the [Snowflake's Resource Optimization: Setup & Configuration Quickstart Guide](https://quickstarts.snowflake.com/guide/resource_optimization_setup/index.html?index=..%2F..index#0), the Idle Users, Users Never Logged In, and Idle Roles queries leverage the [ACCOUNT_USAGE](https://docs.snowflake.com/en/sql-reference/account-usage.html) schema. The Retool app, however, uses Snowflake DDL (e.g. SHOW USERS;) to avoid the latency associated with the ACCOUNT_USAGE schema. This means that you are able to review and update users and roles as soon as they are created in Snowflake. It also means that these queries do not show deleted users or roles.
+- In the [Snowflake's Resource Optimization: Setup & Configuration Quickstart Guide](https://quickstarts.snowflake.com/guide/resource_optimization_setup/index.html?index=..%2F..index#0), the Idle Users, Users Never Logged In, and Idle Roles queries leverage the [ACCOUNT_USAGE](https://docs.snowflake.com/en/sql-reference/account-usage.html) schema. The Retool app, however, uses Snowflake DDL (e.g. SHOW USERS) to avoid the latency associated with the ACCOUNT_USAGE schema. This means that you are able to review and update users and roles as soon as they are created in Snowflake. It also means that these queries do not show deleted users or roles.
 - The Failed Tasks and Long Running Tasks queries can take a long time to run. Feel free to modify them using [Snowflake's recommendations](https://docs.snowflake.com/en/sql-reference/account-usage/task_history.html#usage-notes) as needed.  
 
 

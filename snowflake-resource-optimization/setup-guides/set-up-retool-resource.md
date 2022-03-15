@@ -30,7 +30,10 @@ Authentication: Password (you must use password authentication)
 Database username: <your database username>
 Database password: <your database password>
 
-[X] Disable converting queries to prepared statements (you must check this box; see more info [here](https://docs.retool.com/docs/sql-in-retool#prepared-statements))
+[X] Disable converting queries to prepared statements
+```
+
+Note: You must check the 'Disable converting queries to prepared statements' box (see more info [here](https://docs.retool.com/docs/sql-in-retool#prepared-statements)).
 
 4. Click "Save changes".
 

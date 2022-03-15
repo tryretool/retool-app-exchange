@@ -16,4 +16,4 @@ As an overview, we'll go through the following steps:
 [Step-by-step: Set up Retool Resource](./set-up-retool-resource.md)
 
 ## Step 3 - Set up the Retool app files
-[Step-by-step: Set up Retool App](./set-up-retool-aps.md)
+[Step-by-step: Set up Retool App](./set-up-retool-app.md)

@@ -36,11 +36,11 @@ Snowflake Resource Optimization: Setup & Configuration is a ready-made app that 
 <table>
   <tr>
     <td valign="top"><img src="./images/home-page.png"/></td>
-    <td valign="top"><img src="./images/incident-details.png"/></td>
+    <td valign="top"><img src="./images/warehouses.png"/></td>
   </tr>
   <tr>
-    <td valign="top"><img src="./images/report-incident.png"/></td>
-    <td valign="top"><img src="./images/report-incident-created.png"/></td>
+    <td valign="top"><img src="./images/users.png"/></td>
+    <td valign="top"><img src="./images/statement-timeouts.png"/></td>
   </tr>
 </table>
 

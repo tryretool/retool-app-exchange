@@ -1,4 +1,4 @@
-# Incident Central Setup - Step 4: Resources in Retool
+Snowflake Resource Optimization Setup - Step 2: Resources in Retool
 
 ## What's a Resource in Retool?
 A Resource is a core concept in Retool. A Resource is a config that defines a backend data source that your Retool apps can talk to. Retool supports a variety of different kinds of backends, from databases to REST API calls, to special integrations like Stripe.
@@ -9,13 +9,11 @@ Read more about Resources in [the Retool docs](https://docs.retool.com/docs/inte
 
 ## Output
 The goal of this section is to create:
-* A Resource called `PagerDuty API for Incident Central`. This will be a reusable way to call the PagerDuty API that you set up in Step 1.
-* A Resource called `Slack API for Incident Central`. This will be a reusable way to call the Slack API that you set up in Step 2.
-* A Resource called `Incident Database`. This will be a reusable way to query the database that you set up in Step 3.
+* A Resource called `Snowflake DB`. This will be a reusable way to hit the Snowflake database that you set up in Step 1.
 
 Note: The names here are important! The app code we provide expects the Resources to have these names. (You can choose to rename them, after you've finished setting everything up.)
 
-## Step 4.1 - Create the "PagerDuty API for Incident Central" Resource
+## Step 3.1 - Create the "PagerDuty API for Incident Central" Resource
 1. On the Resources page (`/resources`) in Retool, click "Create New" in the upper right.
 2. Select the "REST API" resource type.
 3. Fill out the resource information as follows:

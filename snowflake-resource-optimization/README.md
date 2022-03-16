@@ -29,7 +29,7 @@ Snowflake Resource Optimization: Setup & Configuration is a ready-made app that 
 - Identify long running tasks and show query history or drop them
 ### Else
 - Review account, warehouse, or user statement timeouts and modify them
-- Identify stale table streams and XXX
+- Identify stale table streams
 
 
 ## Screenshots

@@ -5,7 +5,7 @@ Snowflake provides cloud-based data storage and analytics services, and if you'r
 
 ## Output
 The goal of this section is to create:
-* A PagerDuty account, if you don't have one already. (A free trial works.)
+* A Snowflake account, if you don't have one already. (A free trial works.)
 * A PagerDuty API key.
 * Inside PagerDuty, you should configure at least 1 service, and configure its "escalation policy" to alert the people who are oncall for that service.
 
@@ -31,9 +31,6 @@ If you already have existing services and escalation policies defined in PagerDu
 
 If you don't, follow the instructions in the [PagerDuty Services and Integrations docs](https://support.pagerduty.com/docs/services-and-integrations) under "Create a Service". This will take you through creating a service along with its "escalation policy." The escalation policy is the set of rules that defines who to notify, in what order, when the service has an incident.
 
-If you are feeling fun, create at least 2 services! This will be more realistic.
-
-Note: It's possible to define an oncall schedules—a rotation that consists of multiple people—in PagerDuty as well. You can then define an escalation policy that triggers a specific oncall schedule. To find out how to set up an oncall schedule, see [PagerDuty's Schedule Basics docs](https://support.pagerduty.com/docs/schedule-basics).
 
 ## Summary
 You now have the following items that you can plug into a later step:

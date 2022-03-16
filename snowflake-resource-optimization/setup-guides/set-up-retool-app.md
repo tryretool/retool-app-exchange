@@ -14,7 +14,7 @@ In this step, you will obtain the code file in the `/code` directory in this Git
 To do this, clone this Github repo:
 `git clone https://github.com/tryretool/snowflake-resource-optimization.git`
 
-(Alternatively, you can manually click-to-download the file in the [`code/`](./code) directory.)
+(Alternatively, you can manually click-to-download the file in the [`/code`](../code) directory.)
 
 You will have the following file: `Snowflake-Resource-Optimization-Setup-Configuration.json`.
 

@@ -22,9 +22,8 @@ Note: The names here are important! The app code we provide expects the Resource
 Name: Snowflake DB
 
 Account name: <your account name>
-Database name: <your database name>
-Database schema: <your database schema>
-Database warehouse: <your database warehouse>
+Database name: SNOWFLAKE
+
 User role: ACCOUNTADIN (this role is required)
 
 Authentication: Password (you must use password authentication)

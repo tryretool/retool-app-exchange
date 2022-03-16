@@ -46,7 +46,7 @@ You now have a Snowflake resource defined in Retool, named `Snowflake DB`.
 
 Reminder: The names here are important! The app code we provide expects the Resources to have these names. (You can choose to rename them, after you've finished setting everything up.)
 
-Now, we are ready to import our apps!
+Now, we are ready to import our app!
 
 ## Next step
 [Step-by-step: Set up Retool App](./set-up-retool-app.md)

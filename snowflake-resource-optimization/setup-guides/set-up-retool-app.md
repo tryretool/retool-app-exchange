@@ -19,7 +19,7 @@ To do this, clone this Github repo:
 You will have the following file: `Snowflake-Resource-Optimization-Setup-Configuration.json`.
 
 ## Step 3.2 - Import the app "code"
-First, let's create a folder to put all of this code into, to keep things organized.
+First, let's create a folder to put this code into, to keep things organized.
 1. On your Retool home page, click "Create new" → "Create a new folder". Give this folder a name you like, e.g. "Snowflake Resource Optimization".
 
 2. Now, let's import the app.

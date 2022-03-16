@@ -12,7 +12,7 @@ The goal of this section is:
 In this step, you will obtain the code file in the `/code` directory in this Github repo.
 
 To do this, clone this Github repo:
-`git clone https://github.com/tryretool/snowflake-resource-optimization.git`
+`git clone https://github.com/tryretool/retool-app-exchange.git`
 
 (Alternatively, you can manually click-to-download the file in the [`/code`](../code) directory.)
 

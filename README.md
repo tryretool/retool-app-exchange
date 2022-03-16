@@ -9,6 +9,7 @@ Each app consists of ready-to-use code that you can download and set up in your 
 
 ### 🛠 Updates
 * [Jan 2022] [New] [Incident Central](./incident-central/) - An incident response hub for engineering teams
+* [Mar 2022] [New] [Snowflake Resource Optimization: Setup & Configuration](./snowflake-resource-optimization/)
 
 
 ### 👩‍💻 Contributing

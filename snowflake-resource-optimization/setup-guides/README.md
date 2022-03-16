@@ -7,7 +7,7 @@ As an overview, we'll go through the following steps:
 
 * Set up Snowflake. (Step 1)
 * Set up your Snowflake database as a Resource in Retool. (Step 2)
-* Download and configure the Retool app files in Retool. (Step 3)
+* Download and configure the Retool app file in Retool. (Step 3)
 
 ## Step 1 - Set up Snowflake
 [Step-by-step: Set up Snowflake](./set-up-snowflake.md)

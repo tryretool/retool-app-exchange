@@ -23,7 +23,8 @@ Name: Snowflake DB
 
 Account name: <your account name>
 Database name: SNOWFLAKE
-
+Database schema: [leave blank]
+Database warehouse: [leave blank]
 User role: ACCOUNTADIN (this role is required)
 
 Authentication: Password (you must use password authentication)

@@ -1,58 +1,45 @@
-# Incident Central Setup - Step 3: Database
+# Snowflake Resource Optimization Setup - Step 1: Snowflake
 
-## What's this database for?
-Incident Central will write each new triggered incident to a database table. This table will be the one place where you keep track of all the different metadata associated with each incident. For example, each incident has a name, a start time, a PagerDuty profile, a Slack channel, and so on.
-
-In the future, you may choose to add some other information (e.g. a Google doc, or a Jira ticket) to each incident, in which case you can add additional columns to this database table, and modify Incident Central to write this additional information.
+## What's Snowflake?
+Snowflake provides cloud-based data storage and analytics services, and if you're here, you're likely already using it! The Snowflake Resource Optimization: Setup & Configuration app will read from Snowflake to populate its queries, and write back to Snowflake as users take actions (e.g. setting up auto-resume for a warehouse).
 
 ## Output
 The goal of this section is to create:
-* A database, if you don't already have one
-* A database table called `incidents` with the schema that Incident Central expects
+* A PagerDuty account, if you don't have one already. (A free trial works.)
+* A PagerDuty API key.
+* Inside PagerDuty, you should configure at least 1 service, and configure its "escalation policy" to alert the people who are oncall for that service.
 
-## Step 3.1 - Create a database instance
-If you already have a database that you want to use for Incident Central, you are all set. (The example code we provide will specifically be suited for PostgreSQL, but you can adapt it to whatever database you are using, including a non-relational database if you want.)
+## Step 1.1 - PagerDuty account
+Head on over to [pagerduty.com](https://pagerduty.com/) and sign up, or sign in.
 
-Otherwise, you can spin up a PostgreSQL database on a variety of platforms. [Heroku's managed PostgreSQL offering](https://www.heroku.com/postgres) is one example, and it has a free tier.
+## Step 1.2 - PagerDuty API key
+Follow the instructions in the [PagerDuty API Access Keys docs](https://support.pagerduty.com/docs/api-access-keys) to create a "General Access REST API key."
 
-## Step 3.2 - Create a database table called `incidents` and define its schema
-Run the following command on your database:
-```
-CREATE OR REPLACE FUNCTION trigger_set_timestamp()
-RETURNS TRIGGER AS $$
-BEGIN
-  NEW.updated_at = NOW();
-  RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-```
+Note: We want this key to have "write" access so that we can create incidents. So, do not make the key "read-only".
 
-Then run:
-```
-CREATE TABLE IF NOT EXISTS incidents (
-  id TEXT PRIMARY KEY,
-  created_at TIMESTAMP NOT NULL DEFAULT NOW(),
-  updated_at TIMESTAMP NOT NULL DEFAULT NOW(),
+## Step 1.3 - Invite oncalls to PagerDuty
+If you already have existing oncall people/rotations in PagerDuty, you are all set.
 
-  pagerduty_id TEXT,
-  pagerduty_url TEXT,
+If this is your first time setting up PagerDuty, you'll want to invite the people you want to be oncall. To do this, follow the instructions in [PagerDuty's Manage Users docs](https://support.pagerduty.com/docs/users), under "Add a User". (You may also consider grouping people onto [Teams](https://support.pagerduty.com/docs/teams).)
 
-  slack_channel_id TEXT,
-  slack_channel_name TEXT,
-  slack_channel_url TEXT,
+### Important assumption
+Incident Central works off the following assumptions about your setup:
+* The email address of people in your PagerDuty account matches their email address within your Slack account.
 
-  reporter_email TEXT,
-  incident_commander_email TEXT
-);
+## Step 1.4 - PagerDuty service with escalation policy
+If you already have existing services and escalation policies defined in PagerDuty, you are all set.
 
-CREATE TRIGGER set_updated_at_on_incidents
-BEFORE UPDATE ON incidents
-FOR EACH ROW
-EXECUTE PROCEDURE trigger_set_timestamp();
-```
+If you don't, follow the instructions in the [PagerDuty Services and Integrations docs](https://support.pagerduty.com/docs/services-and-integrations) under "Create a Service". This will take you through creating a service along with its "escalation policy." The escalation policy is the set of rules that defines who to notify, in what order, when the service has an incident.
+
+If you are feeling fun, create at least 2 services! This will be more realistic.
+
+Note: It's possible to define an oncall schedules—a rotation that consists of multiple people—in PagerDuty as well. You can then define an escalation policy that triggers a specific oncall schedule. To find out how to set up an oncall schedule, see [PagerDuty's Schedule Basics docs](https://support.pagerduty.com/docs/schedule-basics).
 
 ## Summary
-You now have a database with an `incidents` table that Incident Central can write to.
+You now have the following items that you can plug into a later step:
+* PagerDuty API key
+
+You also have a "service" within PagerDuty that you want to be able to trigger an incident on, and this service has an "escalation policy" that defines who will get notified when an incident starts.
 
 ## Next step
-[Step-by-step: Set up Retool Resources](./set-up-retool-resource.md)
+[Step-by-step: Set up Retool Resource](./set-up-retool-resource.md)

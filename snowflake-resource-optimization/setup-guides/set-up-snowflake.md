@@ -1,7 +1,7 @@
 # Snowflake Resource Optimization Setup - Step 1: Snowflake
 
 ## What's Snowflake?
-Snowflake provides cloud-based data storage and analytics services, and if you're here, you're likely already using it! The Snowflake Resource Optimization: Setup & Configuration app will read from Snowflake to populate its queries, and write back to Snowflake as users take actions (e.g. setting up auto-resume for a warehouse).
+Snowflake provides cloud-based data storage and analytics services, and if you're here, you're likely already using it! The Snowflake Resource Optimization: Setup & Configuration app will read from Snowflake to populate its queries, and write back to Snowflake as users take actions (e.g. enabling auto-resume for a warehouse or disabling an idle user).
 
 ## Output
 The goal of this section is to:

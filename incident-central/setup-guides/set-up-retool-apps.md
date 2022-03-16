@@ -24,7 +24,7 @@ In this step, you will obtain the code files in the `/code` directory in this Gi
 To do this, clone this Github repo:
 `git clone https://github.com/tryretool/retool-app-exchange.git`
 
-(Alternatively, you can manually click-to-download each file in the [`code/`](./code) directory.)
+(Alternatively, you can manually click-to-download each file in the [`code/`](../code) directory.)
 
 You will have the following files:
 

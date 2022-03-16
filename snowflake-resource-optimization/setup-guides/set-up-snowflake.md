@@ -13,8 +13,7 @@ The Snowflake Resource Optimization: Setup & Configuration app requires a Snowfl
 If you would like to create a new Snowflake user for Retool, please follow Snowflake's instructions on [creating a user](https://docs.snowflake.com/en/user-guide/admin-user-management.html#creating-users). Again, please ensure that this user has the [ACCOUNTADMIN](https://docs.snowflake.com/en/user-guide/admin-user-management.html#creating-users) role.
 
 ## Summary
-You now have the following items that you can plug into a later step:
-* A Snowflake user with the ACCOUNTADMIN role
+You now have a Snowflake user with the ACCOUNTADMIN role, which you can plug into the next step.
 
 ## Next step
 [Step-by-step: Set up Retool Resource](./set-up-retool-resource.md)

@@ -9,9 +9,9 @@ Read more about Resources in [the Retool docs](https://docs.retool.com/docs/inte
 
 ## Output
 The goal of this section is to create:
-* A Resource called `Snowflake DB`. This will be a reusable way to hit the Snowflake database that you set up in Step 1.
+* A Resource called `Snowflake DB`. This will be a reusable way to hit the Snowflake database from Step 1.
 
-Note: The names here are important! The app code we provide expects the Resources to have these names. (You can choose to rename them, after you've finished setting everything up.)
+Note: The names here are important! The app code we provide expects the Resource to have this names. (You can choose to rename it, after you've finished setting everything up.)
 
 ## Step 3.1 - Create the "Snowflake DB" Resource
 1. On the Resources page (`/resources`) in Retool, click "Create New" in the upper right.
@@ -44,7 +44,7 @@ Note: You must check the 'Disable converting queries to prepared statements' box
 ## Summary
 You now have a Snowflake resource defined in Retool, named `Snowflake DB`.
 
-Reminder: The names here are important! The app code we provide expects the Resources to have these names. (You can choose to rename them, after you've finished setting everything up.)
+Reminder: The names here are important! The app code we provide expects the Resource to have this name. (You can choose to rename it, after you've finished setting everything up.)
 
 Now, we are ready to import our app!
 

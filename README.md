@@ -8,9 +8,8 @@ Each app consists of ready-to-use code that you can download and set up in your 
 
 
 ### 🛠 Updates
+* [Mar 2022] [New] [Snowflake Setup & Configuration Optimization](./snowflake-resource-optimization/) - An app that helps you monitor & manage Snowflake resource consumption
 * [Jan 2022] [New] [Incident Central](./incident-central/) - An incident response hub for engineering teams
-* [Mar 2022] [New] [Snowflake Resource Optimization: Setup & Configuration](./snowflake-resource-optimization/)
-
 
 ### 👩‍💻 Contributing
 To contribute, open a Github Issue on this repo, and let us know what you are thinking of contributing! We encourage you to reach out before you get started building to get early feedback.

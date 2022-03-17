@@ -25,7 +25,7 @@ Account name: <your account name>
 Database name: SNOWFLAKE
 Database schema: [leave blank]
 Database warehouse: [leave blank]
-User role: ACCOUNTADIN (this role is required)
+User role: ACCOUNTADMIN (this role is required)
 
 Authentication: Password (you must use password authentication)
 Database username: <your database username>

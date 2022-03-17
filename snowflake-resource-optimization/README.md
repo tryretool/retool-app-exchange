@@ -7,7 +7,7 @@
 ## Why you need this
 This Retool app extends [Snowflake's Resource Optimization: Setup & Configuration Quickstart Guide](https://quickstarts.snowflake.com/guide/resource_optimization_setup/index.html?index=..%2F..index#0). If you use Snowflake, it will help you better monitor and manage your credit consumption, and avoid spending more than you need to.
 
-This Retool app makes it easy to put the Quickstart Guide into practice, by enabling you to take action from right within an easy-to-use UI. Without having to remember or type any commands, you can set auto-suspend set auto-suspend or auto-resume for your warehouses, suspend or drop idle warehouses, disable or drop idle users, etc.
+This Retool app makes it easy to put the Quickstart Guide into practice, by enabling you to take action from right within an easy-to-use UI. Without having to remember or type any commands, you can set auto-suspend or auto-resume for your warehouses, suspend or drop idle warehouses, disable or drop idle users, etc.
 
 ## What does Snowflake Resource Optimization: Setup & Configuration do?
 The Snowflake Resource Optimization: Setup & Configuration app lets you do the following things with the click of a button:

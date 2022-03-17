@@ -9,7 +9,7 @@ Read more about Resources in [the Retool docs](https://docs.retool.com/docs/inte
 
 ## Output
 The goal of this section is to create:
-* A Resource called `Snowflake DB - Account Admin`. This will be a reusable way to hit the Snowflake database from Step 1.
+* A Resource called `Snowflake DB - Account Admin`. This will be a reusable way to hit Snowflake as the user from Step 1.
 
 Note: The name here is important! The app code we provide expects the Resource to have this name. (You can choose to rename it, after you've finished setting everything up.)
 
@@ -28,8 +28,8 @@ Database warehouse: [leave blank]
 User role: ACCOUNTADMIN (this role is required)
 
 Authentication: Password (you must use password authentication)
-Database username: <your database username>
-Database password: <your database password>
+Database username: <your database username from step 1>
+Database password: <your database password from step 1>
 
 [X] Disable converting queries to prepared statements (you must check this box)
 ```

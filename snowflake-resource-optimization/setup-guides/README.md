@@ -1,6 +1,6 @@
-# Snowflake Resource Optimization - Setup guide
+# Snowflake Setup & Configuration Optimization - Setup guide
 
-This guide helps you set up Snowflake Resource Optimization: Setup & Configuration inside your Retool instance. (If you're wondering "What's Snowflake Resource Optimization: Setup & Configuration?", see [the main README](../README.md).)
+This guide helps you set up Snowflake Setup & Configuration Optimization inside your Retool instance. (If you're wondering "What's Snowflake Resource Optimization: Setup & Configuration?", see [the main README](../README.md).)
 
 ## Overview
 As an overview, we'll go through the following steps:

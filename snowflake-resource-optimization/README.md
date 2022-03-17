@@ -12,7 +12,8 @@ The Resource Optimization Quickstart Guides are meant to help customers better m
 Retool builds on the Quickstart Guide by enabling you to take action from right within the tool - set auto-suspend or auto-resume for your warehouses, suspend or drop idle warehouses, disable or drop idle users, etc.
 
 ## What does Snowflake Resource Optimization: Setup & Configuration do?
-Snowflake Resource Optimization: Setup & Configuration is a ready-made app that lets you do these things:
+The Snowflake Setup & Configuration Optimization applets you do the following things with the click of a button:
+
 ### Warehouses
 - Identify warehouses without auto-resume enabled and enable it
 - Identify warehouses without auto-suspend enabled and enable it for your chosen duration

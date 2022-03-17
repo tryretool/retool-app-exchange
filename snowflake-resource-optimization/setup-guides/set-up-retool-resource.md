@@ -9,7 +9,7 @@ Read more about Resources in [the Retool docs](https://docs.retool.com/docs/inte
 
 ## Output
 The goal of this section is to create:
-* A Resource called `Snowflake DB`. This will be a reusable way to hit the Snowflake database from Step 1.
+* A Resource called `Snowflake DB - Account Admin`. This will be a reusable way to hit the Snowflake database from Step 1.
 
 Note: The name here is important! The app code we provide expects the Resource to have this name. (You can choose to rename it, after you've finished setting everything up.)
 
@@ -42,7 +42,7 @@ Note: You must check the 'Disable converting queries to prepared statements' box
 
 
 ## Summary
-You now have a Snowflake resource defined in Retool, named `Snowflake DB`.
+You now have a Snowflake resource defined in Retool, named `Snowflake DB - Account Admin`.
 
 Reminder: The name here is important! The app code we provide expects the Resource to have this name. (You can choose to rename it, after you've finished setting everything up.)
 

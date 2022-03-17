@@ -1,7 +1,7 @@
-# Snowflake Setup & Configuration Optimization
+# Snowflake Resource Optimization: Setup & Configuration
 
 <p align="center">
-<img src="./images/setup-config-demo.gif" alt="Snowflake Setup & Configuration Optimization demo gif" style="width: 600px;">
+<img src="./images/setup-config-demo.gif" alt="Snowflake Resource Optimization: Setup & Configuration Optimization gif" style="width: 600px;">
 </p>
 
 ## Why you need this
@@ -9,8 +9,8 @@ This Retool app extends [Snowflake's Resource Optimization: Setup & Configuratio
 
 This Retool app makes it easy to put the Quickstart Guide into practice, by enabling you to take action from right within an easy-to-use UI. Without having to remember or type any commands, you can set auto-suspend set auto-suspend or auto-resume for your warehouses, suspend or drop idle warehouses, disable or drop idle users, etc.
 
-## What does Snowflake Setup & Configuration Optimization do?
-The Snowflake Setup & Configuration Optimization app lets you do the following things with the click of a button:
+## What does Snowflake Resource Optimization: Setup & Configuration do?
+The Snowflake Resource Optimization: Setup & Configuration app lets you do the following things with the click of a button:
 
 ### Warehouses
 - Identify warehouses without auto-resume enabled and enable it
@@ -48,10 +48,10 @@ This tool will enable users to make irreversible changes, such as dropping wareh
 
 ## Technical Details and Setup
 ### Dependencies - backends
-The Snowflake Setup & Configuration Optimization app depends on the following backend services:
+The Snowflake Resource Optimization: Setup & Configuration app depends on the following backend services:
 - Snowflake
 
-### How to set up Snowflake Setup & Configuration Optimization in your Retool instance
+### How to set up Snowflake Resource Optimization: Setup & Configuration in your Retool instance
 See the detailed setup guides in the [Setup Guides folder](./setup-guides).
 
 As an overview, these guides will take you through:

@@ -1,4 +1,4 @@
-# Step 3: Apps in Retool
+# App Setup - Step 3: Apps in Retool
 
 ## What's an App in Retool?
 As the name suggests, an App is a single "view" (or "page") that you can build in Retool. An App is built from a combination of Components to construct the UI, and Queries that define calls to your Resources. Queries can do reads or writes.

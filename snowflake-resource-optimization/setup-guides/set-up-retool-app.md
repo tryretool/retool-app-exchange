@@ -1,11 +1,11 @@
-# Snowflake Resource Optimization Setup - Step 3: Apps in Retool
+# Step 3: Apps in Retool
 
 ## What's an App in Retool?
 As the name suggests, an App is a single "view" (or "page") that you can build in Retool. An App is built from a combination of Components to construct the UI, and Queries that define calls to your Resources. Queries can do reads or writes.
 
 ## Output
 The goal of this section is:
-* To get Snowflake Resource Optimization: Setup & Configuration into your Retool instance. 🚀
+* To get Snowflake Setup & Configuration Optimization into your Retool instance. 🚀
 
 
 ## Step 3.1 - Download the app "code"
@@ -16,7 +16,7 @@ To do this, clone this Github repo:
 
 (Alternatively, you can manually click-to-download the file in the [`/code`](../code) directory.)
 
-You will have the following file: `Snowflake-Resource-Optimization-Setup-Configuration.json`.
+You will have the following file: `Snowflake-Setup-Configuration.json`.
 
 ## Step 3.2 - Import the app "code"
 First, let's create a folder to put this code into, to keep things organized.
@@ -24,12 +24,12 @@ First, let's create a folder to put this code into, to keep things organized.
 
 2. Now, let's import the app.
    * Click "Create new" → "Import an app".
-   * Upload the `Snowflake-Resource-Optimization-Setup-Configuration.json` file, and select the folder you just created ("Snowflake Resource Optimization") as the destination.
+   * Upload the `Snowflake-Setup-Configuration.json` file, and select the folder you just created ("Snowflake Resource Optimization") as the destination.
 
 ## Step 3.3 - Test it out
 In this section, we're going to test out the functionality in your new app. Please be aware that you can use this app to make irreversible changes (e.g. drop a warehouse or user).
 
-Navigate to your "Snowflake Resource Optimization" folder, and click on the "Snowflake Resource Optimization: Setup & Configuration" app. Toggle through the application tabs (Warehouses, Users, Tasks, Else), review query results, and try out a couple of actions, e.g.: 
+Navigate to your "Snowflake Resource Optimization" folder, and click on the "Snowflake Setup & Configuration Optimization" app. Toggle through the application tabs (Warehouses, Users, Tasks, Else), review query results, and try out a couple of actions, e.g.: 
 - Set auto-resume for a warehouse without it
 - Suspend an idle warehouse
 - Disable a user who has never logged in
@@ -37,7 +37,7 @@ Navigate to your "Snowflake Resource Optimization" folder, and click on the "Sno
 
 ## Summary
 
-You should now have Snowflake Resource Optimization: Setup & Configuration within your Retool instance! 🥳
+You should now have Snowflake Setup & Configuration Optimization within your Retool instance! 🥳
 
 **Next steps:** You can choose to extend or adjust this app in any way.
 

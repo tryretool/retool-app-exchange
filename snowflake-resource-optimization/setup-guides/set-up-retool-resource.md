@@ -13,13 +13,13 @@ The goal of this section is to create:
 
 Note: The name here is important! The app code we provide expects the Resource to have this name. (You can choose to rename it, after you've finished setting everything up.)
 
-## Step 3.1 - Create the "Snowflake DB" Resource
+## Step 3.1 - Create the "Snowflake DB - Account Admin" Resource
 1. On the Resources page (`/resources`) in Retool, click "Create New" in the upper right.
 2. Select the "Snowflake" resource type.
 3. Fill out the resource information as follows. (For more info, see [our docs on Snowflake integration](https://docs.retool.com/docs/snowflake-integration).)
 
 ```
-Name: Snowflake DB
+Name: Snowflake DB - Account Admin
 
 Account name: <your account name>
 Database name: SNOWFLAKE

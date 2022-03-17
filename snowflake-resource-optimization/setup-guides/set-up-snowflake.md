@@ -1,4 +1,4 @@
-# Snowflake Setup & Configuration Optimization Setup - Step 1: Snowflake
+# Step 1: Snowflake
 
 ## What's Snowflake?
 Snowflake provides cloud-based data storage and analytics services, and if you're here, you're likely already using it! The Snowflake Setup & Configuration Optimization app is designed to help you manage your Snowflake resources.

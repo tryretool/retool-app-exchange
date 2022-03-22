@@ -34,7 +34,6 @@ The Snowflake Resource Optimization: Setup & Configuration app lets you do the f
 ## Screenshots
 <table>
   <tr>
-    <td valign="top"><img src="./images/home-page.png"/></td>
     <td valign="top"><img src="./images/warehouses.png"/></td>
   </tr>
   <tr>

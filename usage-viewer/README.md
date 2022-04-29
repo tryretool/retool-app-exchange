@@ -56,7 +56,10 @@ To do this, clone this Github repo: `git clone https://github.com/tryretool/reto
 ### 2. Import the app code
 In the [Retool dashboard](https://docs.retool.com/docs/protected-applications-getting-started#importing-the-application), click `Create new` and select `Import an app`. Upload the JSON file containing the app code, and name the app.
 
-### 3. Test it out
+### 3. Connect app queries to the Postgres resource
+Load the Usage Viewer in editor mode and open the bottom panel to view the queries. The `auditLogsQueries` folder contains three Postgres queries. Edit each of them and select your Retool Postgres database from the Resource dropdown. Don't forget to save your queries after editing them! 
+
+### 4. Test it out
 When you load the Usage Viewer in preview mode, you should see a table populated with all of the apps in your Retool instance. Try searching for specific apps, filtering by folder, and adjusting the date range.
 
 ## How to contribute

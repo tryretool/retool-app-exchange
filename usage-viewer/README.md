@@ -16,10 +16,10 @@ Usage Viewer is a ready-made app that lets you do these things:
 <img src="./images/usage_viewer.png">
 
 ## Technical details and setup
-The Usage Viewer connects to the Postgres instance containing your [Retool storage database](https://docs.retool.com/docs/configuring-retools-storage-database), where a copy of all audit logs are stored. This database is named `hammerhead_production` and is only accessible when self-hosting Retool.
+The Usage Viewer connects to the Postgres instance containing your [Retool storage database](https://docs.retool.com/docs/configuring-retools-storage-database), where a copy of all audit logs are stored. This database is named `hammerhead_production` by default (although it can be changed) and is only accessible when self-hosting Retool.
 
 ### Create a read-only database user
-In order to use the Usage Viewer, first create a Postgres user with **read-only** access to the following tables in the `hammerhead_production` database:
+In order to use the Usage Viewer, first create a Postgres user with **read-only** access to the following tables in the Retool storage database:
 
 - `pages` (contains information about Retool apps)
 - `folders`
@@ -31,10 +31,10 @@ To create a user and set a password, use the following command:
 CREATE USER read_only_user WITH PASSWORD 'secure_password';
 ```
 
-To assign the required permissions, connect to `hammerhead_production` and use the following commands:
+To assign the required permissions, connect to the Retool storage database and use the following commands:
 
 ```
-GRANT CONNECT ON DATABASE hammerhead_production TO read_only_user;
+GRANT CONNECT ON DATABASE retool_storage_database TO read_only_user;
 GRANT USAGE ON SCHEMA public TO read_only_user;
 GRANT SELECT ON pages TO read_only_user;
 GRANT SELECT ON folders TO read_only_user;

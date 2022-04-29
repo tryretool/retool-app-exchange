@@ -28,7 +28,7 @@ In order to use the Usage Viewer, first create a Postgres user with **read-only*
 To create a user and set a password, use the following command:
 
 ```
-CREATE USER read_only_user WITH PASSWORD 'secure_password'
+CREATE USER read_only_user WITH PASSWORD 'secure_password';
 ```
 
 To assign the required permissions, connect to `hammerhead_production` and use the following commands:

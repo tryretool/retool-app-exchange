@@ -12,7 +12,8 @@ Usage Viewer is a ready-made app that lets you do these things:
 2. Filter by app name, folder, and time range
 3. Identify top apps visually using built-in charts
 
-## Screenshots - TODO
+## Screenshot
+<img src="./images/usage_viewer.png">
 
 ## Technical details and setup
 The Usage Viewer connects to the Postgres instance containing your [Retool storage database](https://docs.retool.com/docs/configuring-retools-storage-database), where a copy of all audit logs are stored. This database is named `hammerhead_production` and is only accessible when self-hosting Retool.
@@ -48,9 +49,9 @@ In the Retool dashboard, [create a new Postgres resource](https://docs.retool.co
 ### 1. Download the app code
 Download the app code from the `/code` directory in this repository.
 
-To do this, clone this Github repo: `git clone` 
+To do this, clone this Github repo: `git clone https://github.com/tryretool/retool-app-exchange.git` 
 
-(Alternatively, you can manually click-to-download...
+(Alternatively, you can manually download `usage_viewer.json` from the [`code/`](../code) directory.)
 
 ### 2. Import the app code
 In the [Retool dashboard](https://docs.retool.com/docs/protected-applications-getting-started#importing-the-application), click `Create new` and select `Import an app`. Upload the JSON file containing the app code, and name the app.

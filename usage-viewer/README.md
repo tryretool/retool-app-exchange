@@ -1,9 +1,14 @@
 # Retool Usage Viewer - Identify top apps by pageviews and queries
 
+## Requirements
+This app needs read access to [Retool's storage database](https://docs.retool.com/docs/configuring-retools-storage-database). Therefore, it is only suitable for use with self-hosted instances of Retool.
+
 ## Why you need this
 As an administrator of a self-hosted Retool instance, you want to understand the most frequently used apps in your instance. The Retool audit log contains the information you need, but it's difficult to access and make sense of.
 
 The Retool Usage Viewer makes your job easier by displaying app usage in a way that's easy to consume.
+
+To track app usage beyond pageviews and queries, consider defining [analytics events](https://docs.retool.com/docs/analytics).
 
 ## What does the Usage Viewer do?
 Usage Viewer is a ready-made app that lets you do these things:
@@ -15,10 +20,10 @@ Usage Viewer is a ready-made app that lets you do these things:
 ## Screenshot
 <img src="./images/usage_viewer.png">
 
-## Technical details and setup
-The Usage Viewer connects to the Postgres instance containing your [Retool storage database](https://docs.retool.com/docs/configuring-retools-storage-database), where a copy of all audit logs are stored. This database is named `hammerhead_production` by default (although it can be changed) and is only accessible when self-hosting Retool.
+## Technical details and setup instructions
+The Usage Viewer connects to the Postgres instance containing your [Retool storage database](https://docs.retool.com/docs/configuring-retools-storage-database), where a copy of all audit logs is stored. This database is named `hammerhead_production` by default (although it can be changed) and is only accessible when self-hosting Retool.
 
-### Create a read-only database user
+### 1. Create a read-only database user
 In order to use the Usage Viewer, first create a Postgres user with **read-only** access to the following tables in the Retool storage database:
 
 - `pages` (contains information about Retool apps)
@@ -41,26 +46,26 @@ GRANT SELECT ON folders TO read_only_user;
 GRANT SELECT ON audit_trail_events TO read_only_user;
 ```
 
-## Create a Postgres resource connection
-In the Retool dashboard, [create a new Postgres resource](https://docs.retool.com/docs/postgresql-integration) and provide the necessary connection details.
+### 2. Create a Postgres Resource
+In the Retool Resources page, [create a new Postgres Resource](https://docs.retool.com/docs/postgresql-integration) and name it `Retool Audit Log`. Provide the necessary connection details and save. 
 
-## Import the Usage Viewer
-
-### 1. Download the app code
+### 3. Download the app code
 Download the app code from the `/code` directory in this repository.
 
 To do this, clone this Github repo: `git clone https://github.com/tryretool/retool-app-exchange.git` 
 
 (Alternatively, you can manually download `usage_viewer.json` from the [`code/`](../code) directory.)
 
-### 2. Import the app code
-In the [Retool dashboard](https://docs.retool.com/docs/protected-applications-getting-started#importing-the-application), click `Create new` and select `Import an app`. Upload the JSON file containing the app code, and name the app.
+### 4. Import the app code
+On the [Retool main page](https://docs.retool.com/docs/protected-applications-getting-started#importing-the-application), click `Create new` and select `Import an app`. Upload the JSON file containing the app code, and name the app.
 
-### 3. Connect app queries to the Postgres resource
-Load the Usage Viewer in editor mode and open the bottom panel to view the queries. The `auditLogsQueries` folder contains three Postgres queries. Edit each of them and select your Retool Postgres database from the Resource dropdown. Don't forget to save your queries after editing them! 
-
-### 4. Test it out
+### 5. Test it out
 When you load the Usage Viewer in preview mode, you should see a table populated with all of the apps in your Retool instance. Try searching for specific apps, filtering by folder, and adjusting the date range.
+
+## Troubleshooting
+If the Usage Viewer doesn't populate with data, it's possible that the name of your Postgres Resource doesn't match what the app is expecting: `Retool Audit Log`. 
+
+To update the queries to use the correct Resource, load the Usage Viewer in editor mode and open the bottom panel to view the queries. The `retoolDatabaseQueries` folder contains three Postgres queries. Edit each of them and select your Retool Postgres database from the Resource dropdown. Don't forget to save your queries after editing them! 
 
 ## How to contribute
 Please open a Github Issue on this repo, and let us know about your interest in contributing! We encourage you to reach out before you get started building to get early feedback.

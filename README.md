@@ -8,8 +8,9 @@ Each app consists of ready-to-use code that you can download and set up in your 
 
 
 ### 🛠 Updates
-* [Mar 2022] [New] [Snowflake Resource Optimization: Setup & Configuration](./snowflake-resource-optimization/) - An app that helps you monitor & manage Snowflake resource consumption
-* [Jan 2022] [New] [Incident Central](./incident-central/) - An incident response hub for engineering teams
+* [May 2022] [Usage Viewer](./usage-viewer/) - An app that helps you identify top apps by pageviews and queries in your Retool instance 
+* [Mar 2022] [Snowflake Resource Optimization: Setup & Configuration](./snowflake-resource-optimization/) - An app that helps you monitor & manage Snowflake resource consumption
+* [Jan 2022] [Incident Central](./incident-central/) - An incident response hub for engineering teams
 
 ### 👩‍💻 Contributing
 To contribute, open a Github Issue on this repo, and let us know what you are thinking of contributing! We encourage you to reach out before you get started building to get early feedback.

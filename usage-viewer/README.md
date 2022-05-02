@@ -8,7 +8,7 @@ As an administrator of a self-hosted Retool instance, you want to understand the
 
 The Retool Usage Viewer makes your job easier by displaying app usage in a way that's easy to consume.
 
-To track app usage beyond pageviews and queries, consider defining [analytics events](https://docs.retool.com/docs/analytics).
+To track app usage beyond pageviews and queries or over long time ranges, consider defining [analytics events](https://docs.retool.com/docs/analytics).
 
 ## What does the Usage Viewer do?
 Usage Viewer is a ready-made app that lets you do these things:

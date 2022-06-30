@@ -6,8 +6,7 @@ This data will help you properly allocate developer resources toward app-buildin
 
 **Note**: This app surfaces *directional* usage metrics – not the exact # of users you'll be invoiced for next month.
 
-## Screenshot
-<img src="./images/usage_analytics.png">
+<img src="./images/usage_analytics.png" width=50% height=50%>
 
 ## Setup
 This app needs read access to [Retool's storage database](https://docs.retool.com/docs/configuring-retools-storage-database). Therefore, it's only suitable for use with self-hosted instances of Retool. 

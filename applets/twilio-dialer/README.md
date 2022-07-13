@@ -9,6 +9,7 @@ If you'd just like a guided tour of how the applet works, check out our video wa
 <p align="center">
 <img src="./images/twilio-dialer.png" width=75% height=75%>
 </p>
+
 ## Who is this for?
 This applet will be most interesting for developers who are familiar with the core concepts of building Retool apps and are looking to take the next step with custom components.
 

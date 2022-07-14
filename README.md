@@ -1,6 +1,6 @@
 ## ✨ Retool App Exchange ✨
 
-The Retool App Exchange is a collection of open source apps built by Retools and community members.
+The Retool App Exchange is a collection of open source apps and applets built by Retools and community members.
 
 We welcome you to download apps to use, contribute extensions to apps, or contribute new apps that you think others might find helpful.
 
@@ -8,6 +8,7 @@ Each app consists of ready-to-use code that you can download and set up in your 
 
 
 ### 🛠 Updates
+* [Jul 2022] [Twilio Dialer](./applets/twilio-dialer/) - An applet with an embedded Twilio dialer, enabling outbound voice calls
 * [May 2022] [Usage Viewer](./usage-viewer/) - An app that helps you identify top apps by pageviews and queries in your Retool instance 
 * [Mar 2022] [Snowflake Resource Optimization: Setup & Configuration](./snowflake-resource-optimization/) - An app that helps you monitor & manage Snowflake resource consumption
 * [Jan 2022] [Incident Central](./incident-central/) - An incident response hub for engineering teams

@@ -92,14 +92,6 @@
           device = new Twilio.Device(model.data.token); // Instantiate a new Device: https://www.twilio.com/docs/voice/sdks/javascript/twiliodevice#instantiate-a-device
 
           // Set event handlers on the new Device which trigger log messages: https://www.twilio.com/docs/voice/sdks/javascript/twiliodevice#deviceoneventname-listener
-          device.on("registering", (device) => {
-            log("Twilio.Device Registering...");
-          });
-
-          device.on("registered", (device) => {
-            log("Twilio.Device Registered!");
-          });
-
           device.on("error", (error) => {
             log("Twilio.Device Error: " + error.message);
           });

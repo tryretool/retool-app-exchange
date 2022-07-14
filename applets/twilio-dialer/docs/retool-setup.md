@@ -28,4 +28,4 @@ If everything is working as expected, you should now be able to place outbound c
 
 You can read more about [Retool custom components](https://docs.retool.com/docs/custom-components). You can also view the code used in the Twilio Dialer component in Retool, the contents of which are included in [retool-custom-component.html](./code/retool/retool-custom-component.html) for easy reading!
 
-Also, take 15 minutes to check out our [video walkthrough](/PLACEHOLDER_DON'T_FORGET_ME!) of how this app is put together!
+Also, take 18 minutes to check out our [video walkthrough](https://youtu.be/jxWpGv9A47g) of how this app is put together!

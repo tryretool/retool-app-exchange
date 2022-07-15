@@ -1,0 +1,140 @@
+<!-- Retool custom component model
+{
+  status (string): "ready_for_call" | "retool_called" | "retool_ended",
+  phoneNumber (string): < a ten-digit phone number, prefixed with "+" >,
+  data (object): < a Twilio JWT containing a voice access token >,
+}
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Embedded Twilio Dialer for Retool</title>
+    <style>
+      body,
+      p {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        background: #272726;
+      }
+
+      label {
+        text-align: left;
+        font-family: Helvetica, sans-serif;
+        font-size: 1.25em;
+        color: #777776;
+        display: block;
+      }
+
+      div#controls {
+        padding: 1em;
+        margin: 0 auto;
+      }
+
+      div#controls div#call-controls,
+      div#controls div#info {
+        margin: 0 1.5em;
+        text-align: center;
+      }
+
+      div#controls div#log {
+        border: 1px solid #686865;
+        width: 100%;
+        height: 9.5em;
+        text-align: left;
+        overflow-y: scroll;
+      }
+
+      div#controls div#log p {
+        color: #686865;
+        font-family: "Share Tech Mono", "Courier New", Courier, fixed-width;
+        font-size: 1.25em;
+        line-height: 1.25em;
+        margin-left: 1em;
+        text-indent: -1.25em;
+        width: 90%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="controls">
+      <div id="log"></div>
+    </div>
+
+    <!-- Twilio's voice SDK is not available via Twilio CDN, so you must host it yourself: https://www.twilio.com/docs/voice/sdks/javascript#installation -->
+    <script
+      type="text/javascript"
+      src="https://retool-twilio.s3.amazonaws.com/twilio.min.js"
+    ></script>
+    <script>
+      /* eslint-disable */
+      // Activity log
+      function log(message) {
+        var logDiv = document.getElementById("log");
+        logDiv.innerHTML += "<p>&gt;&nbsp;" + message + "</p>";
+        logDiv.scrollTop = logDiv.scrollHeight;
+      }
+
+      // Initialize variables to be used inside of the window.Retool.subscribe function
+      var device;
+      var currentPhoneNumber;
+      var call;
+
+      // window.Retool.subscribe is evaluated whenever the Retool custom component model changes: https://docs.retool.com/docs/custom-components#non-react-javascript
+      window.Retool.subscribe(async function (model) {
+        // subscribes to model updates
+        // all model values can be accessed here
+        
+        if (model.data && model.data.token && !device) { // If a voice token is passed into the model, and the device object is not yet available...
+          device = new Twilio.Device(model.data.token); // Instantiate a new Device: https://www.twilio.com/docs/voice/sdks/javascript/twiliodevice#instantiate-a-device
+
+          // Set event handlers on the new Device which trigger log messages: https://www.twilio.com/docs/voice/sdks/javascript/twiliodevice#deviceoneventname-listener
+          device.on("error", (error) => {
+            log("Twilio.Device Error: " + error.message);
+          });
+        }
+
+        if (
+          model.phoneNumber &&
+          model.status === "retool_called" &&
+          currentPhoneNumber != model.phoneNumber
+        ) { // If a phone number is passed into the model, and the user clicked the Call button in the UI...
+          currentPhoneNumber = model.phoneNumber;
+
+          // get the phone number to connect the call to
+          var params = { params: { To: currentPhoneNumber } };
+
+          log("Calling " + currentPhoneNumber + "...");
+          if (device) {
+            call = await device.connect(params); // Instantiate a new Call object, passing in the phone number: https://www.twilio.com/docs/voice/sdks/javascript/twiliodevice#deviceconnectconnectoptions
+
+            // Set event handlers on the new Call: https://www.twilio.com/docs/voice/sdks/javascript/twiliocall#events
+            call.on("accept", (call) => {
+              log("Successfully established call!");
+            });
+
+            call.on("disconnect", (call) => { // When the call is disconnected (either by the Retool user or the called party)...
+              log("Call ended.");
+              currentPhoneNumber = null; // Set the currentPhoneNumber back to null and...
+              window.Retool.modelUpdate({ status: "ready_for_call" }); // Update the model with new status: https://docs.retool.com/docs/custom-components#non-react-javascript
+            });
+
+            if (call.status() === "connecting") {
+              log("Connecting...");
+            }
+          }
+        }
+
+        if (model.status === "retool_ended") { // If the user clicked the End button in the UI... 
+          log("Hanging up...");
+          if (device) {
+            device.disconnectAll(); // Disconnect the call: https://www.twilio.com/docs/voice/sdks/javascript/twiliodevice#devicedisconnectall
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -8,6 +8,7 @@ Each app consists of ready-to-use code that you can download and set up in your 
 
 
 ### 🛠 Updates
+* [Aug 2022] [Snowflake: User Access Roles Review](./snowflake-uar-reviews/) - An app that allows managers and compliance teams to audit and review user access roles in Snowflake. 
 * [Jul 2022] [Twilio Dialer](./applets/twilio-dialer/) - An applet with an embedded Twilio dialer, enabling outbound voice calls
 * [May 2022] [Usage Viewer](./usage-viewer/) - An app that helps you identify top apps by pageviews and queries in your Retool instance 
 * [Mar 2022] [Snowflake Resource Optimization: Setup & Configuration](./snowflake-resource-optimization/) - An app that helps you monitor & manage Snowflake resource consumption

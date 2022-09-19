@@ -7,20 +7,24 @@ If you don't already have a Twilio account, you'll need to get one! The good new
 
 As you go through the onboarding flow, indicate that you'll be building a messaging app. Once you're logged into Twilio console, you'll be prompted to get a Twilio phone number. Note the phone number you were assigned for later!
 
-## 1. Create an API key/secret pair
+## 1. Verify your SMS-enabled phone number
+[Verify your phone number](https://support.twilio.com/hc/en-us/articles/223180048-Adding-a-Verified-Phone-Number-or-Caller-ID-with-Twilio) to enable outbound SMS to that number. Note that this is only necessary with trial Twilio accounts.
+
+## 2. Create an API key/secret pair
 
 [Create an API key](https://www.twilio.com/docs/iam/keys/api-key-resource) and note the key's `SID` and `Secret` for later.
 
-## 2. Retrieve Account SID and API Token
+## 3. Retrieve Account SID and API Token
 [Retrieve your Account SID and API Token](https://www.twilio.com/console/dev-tools/api-keys) from the Twilio admin console and note them for later.
 
-## 3. Create a Twilio Conversations Service
+## 4. Create a Twilio Conversations Service
 [Create a Conversations Service](https://www.twilio.com/docs/conversations/api/service-resource) and note the `SID` for later.
-## 4. Create a Twilio Functions Service
+## 5. Create a Twilio Functions Service
 
 A [Twilio Service](https://www.twilio.com/docs/runtime/functions/create-service) is a container for the server-less functions which make it possible for your Retool app to get a chat access token.
 
-## 5. Set Twilio Service environment variables
+## 6. Set Twilio Service environment variables
+
 
 In your new Twilio Service, set the following environment variables:
 
@@ -30,7 +34,7 @@ In your new Twilio Service, set the following environment variables:
 | `API_KEY` | The `SID` you noted in step one |
 | `API_SECRET` | The `Secret` you noted in step one |
 
-## 6. Configure Twilio Service dependencies
+## 7. Configure Twilio Service dependencies
 
 The server-less functions running in Twilio need access to a few software libraries to function properly. Import the following NPM modules:
 
@@ -42,7 +46,7 @@ The server-less functions running in Twilio need access to a few software librar
 | `xmldom` | `0.1.27` |
 | `util` | `0.11.0` |
 
-## 7. Create a function to issue voice tokens
+## 8. Create a function to issue voice tokens
 
 In order for the embedded Twilio Conversations client to authenticate with Twilio's services, it needs a valid access token. To create a function for issuing chat tokens:
 
@@ -53,7 +57,7 @@ In order for the embedded Twilio Conversations client to authenticate with Twili
 4. Copy and paste the contents of [chat_token.js](./code/twilio-functions/chat_token.js) into the function and save
 5. Copy the URL for this function for later use
 
-## 8. Deploy your Twilio Service!
+## 9. Deploy your Twilio Service!
 
 This finalizes all of the changes you've made.
 

@@ -11,23 +11,26 @@ As you go through the onboarding flow, indicate that you'll be building a messag
 
 [Create an API key](https://www.twilio.com/docs/iam/keys/api-key-resource) and note the key's `SID` and `Secret` for later.
 
-## 2. Create a Twilio Conversations Service
+## 2. Retrieve Account SID and API Token
+[Retrieve your Account SID and API Token](https://www.twilio.com/console/dev-tools/api-keys) from the Twilio admin console and note them for later.
+
+## 3. Create a Twilio Conversations Service
 [Create a Conversations Service](https://www.twilio.com/docs/conversations/api/service-resource) and note the `SID` for later.
-## 3. Create a Twilio Functions Service
+## 4. Create a Twilio Functions Service
 
 A [Twilio Service](https://www.twilio.com/docs/runtime/functions/create-service) is a container for the server-less functions which make it possible for your Retool app to get a chat access token.
 
-## 4. Set Twilio Service environment variables
+## 5. Set Twilio Service environment variables
 
 In your new Twilio Service, set the following environment variables:
 
 | Key | Value |
 | ---- | ----  |
-| `SERVICE_SID` | The `Conversations SID` you noted in step two |
+| `SERVICE_SID` | The `Conversations SID` you noted in step three |
 | `API_KEY` | The `SID` you noted in step one |
 | `API_SECRET` | The `Secret` you noted in step one |
 
-## 5. Configure Twilio Service dependencies
+## 6. Configure Twilio Service dependencies
 
 The server-less functions running in Twilio need access to a few software libraries to function properly. Import the following NPM modules:
 
@@ -39,7 +42,7 @@ The server-less functions running in Twilio need access to a few software librar
 | `xmldom` | `0.1.27` |
 | `util` | `0.11.0` |
 
-## 6. Create a function to issue voice tokens
+## 7. Create a function to issue voice tokens
 
 In order for the embedded Twilio Conversations client to authenticate with Twilio's services, it needs a valid access token. To create a function for issuing chat tokens:
 
@@ -50,7 +53,7 @@ In order for the embedded Twilio Conversations client to authenticate with Twili
 4. Copy and paste the contents of [chat_token.js](./code/twilio-functions/chat_token.js) into the function and save
 5. Copy the URL for this function for later use
 
-## 7. Deploy your Twilio Service!
+## 8. Deploy your Twilio Service!
 
 This finalizes all of the changes you've made.
 

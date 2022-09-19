@@ -15,10 +15,12 @@ In order for your Retool app to authenticate with Twilio, you'll need to get a v
 
 ### 2. Download the Retool app code
 
-Download [twilio-dialer-retool-app.json](./code/retool/twilio-dialer-retool-app.json) from this repository.
+Download [twilio-dialer-retool-app.json](/applets/twilio-dialer/code/retool/twilio-dialer-retool-app.json) from this repository.
 
 ### 3. Import the Retool app code
 On the [Retool main page](https://docs.retool.com/docs/protected-applications-getting-started#importing-the-application), click `Create new` and select `Import an app`. Upload the JSON file containing the app code, and name the app.
+
+You may need to connect the `getVoiceToken` Resource Query to the REST API Resource you created previously.
 
 ### 4. Explore the Retool app
 

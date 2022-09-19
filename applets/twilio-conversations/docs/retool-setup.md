@@ -20,16 +20,37 @@ Your Twilio app will need to delete previously created Conversations in order to
 1. Navigate to the `/resources` page in your instance and click "Create a new resource." 
 2. Select Twilio as the resource type.
 3. Name the resource "Twilio Conversations API."
-4. Specify the `Account SID` and `Auth Token` you 
+4. Specify the `Account SID` and `Auth Token` you retrieved in Step 2 of the [Twilio Setup](twilio-setup.md).
+5. Save your changes.
 
-## 2. Download the Retool app code
+## 3. Create a Retool REST API resource to add Participants to Conversations
 
-Download [twilio-conversations-retool-app.json](./code/retool/twilio-conversations-retool-app.json) from this repository.
+Your Twilio app will need to add SMS Participants to Conversations in order to communicate with an SMS client. This step is necessary as adding Participants is not fully supported in the version of the Twilio OpenAPI spec integrated with Retool. To set this up:
 
-## 3. Import the Retool app code
+1. Navigate to the `/resources` page in your instance and click "Create a new resource." 
+2. Select REST API as the resource type.
+3. Name the resource “Twilio Conversations - Participants.”
+4. Specify `https://conversations.twilio.com/v1/Conversations/` as the Base URL.
+5. Select `Basic Auth` and provide your Twilio Account SID as the `Username` and your Auth Token as the `Password`.
+6. Save your changes.
+
+## 4. Download the Retool app code
+
+Download [twilio-conversations-retool-app.json](/applets/twilio-conversations/code/retool/twilio-conversations-retool-app.json) from this repository.
+
+## 5. Import the Retool app code
 On the [Retool main page](https://docs.retool.com/docs/protected-applications-getting-started#importing-the-application), click `Create new` and select `Import an app`. Upload the JSON file containing the app code, and name the app.
 
-## 4. Explore the Retool app
+You may need to connect the Resource Queries in the Retool app with the Resources you created in the previous steps: 
+
+| Folder | Resource Query | Resource |
+| --- | --- | --- |
+| gets | getConversations | Twilio Conversations API |
+| gets | getChatToken | Twilio Conversations Chat Token |
+| writes | addParticipant | Twilio Conversations - Participants |
+| writes | deleteConversations | Twilio Conversations API |
+
+## 6. Explore the Retool app
 
 If everything is working as expected, you should now be able to place outbound calls from the Retool app! The app is set up with a hardcoded table of "leads" to simulate a simple call center app. You can edit the contents of the leads table directly, or simply type your phone number in the field to try calling yourself.
 

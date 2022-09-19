@@ -56,6 +56,6 @@ If everything is working as expected, you should now be able to send and receive
 
 ## 7. Learn about how the custom component works
 
-You can read more about [Retool custom components](https://docs.retool.com/docs/custom-components). You can also view the code used in the Twilio Conversations component in Retool, the contents of which are included in [retool-custom-component.html](./code/retool/retool-custom-component.html) for easy reading!
+You can read more about [Retool custom components](https://docs.retool.com/docs/custom-components). You can also view the code used in the Twilio Conversations component in Retool, the contents of which are included in [retool-custom-component.html](/applets/twilio-conversations/code/retool/retool-custom-component.html) for easy reading!
 
 Also, take 18 minutes to check out our [video walkthrough]() of how this app is put together!

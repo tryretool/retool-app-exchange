@@ -1,0 +1,106 @@
+<!-- Retool custom component model
+{
+  browser (string): "Chrome" | "Not Chrome",
+  conversationCleared (boolean): < set by initialize Retool JS query >,
+  token (string): < a Twilio JWT containing a chat access token >,
+  status: (string): "The client successfully initialized!",
+  error: (string): "The client failed to initialize",
+  conversationSid (string): < a Twilio SID associated with the active Conversation >,
+  customerNumber (string): < the E.164-formatted phone number of the participating attached to the Conversation>,
+  outbound (string): < the most recent message sent by the Retool user >,
+  inbound (string): < the most recent message received from the customer > 
+}
+-->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Embedded Twilio Conversations Client for Retool</title>
+    <!-- Initialize the Twilio Conversations SDK: https://www.twilio.com/docs/conversations/javascript/changelog#latest-release -->
+    <script
+      src="https://media.twiliocdn.com/sdk/js/conversations/releases/2.1.0/twilio-conversations.min.js"
+      integrity="sha256-v2SFLWujVq0wnwHpcxct7bzTP8wII7sumEhAKMEqgHQ="
+      crossorigin="anonymous"
+    ></script>
+
+    <script>
+      // Parse the Retool user's userAgent to determine if they are using Chrome.
+      // Non-Chrome browsers may restrict access to WebSockets, the technology which powers bi-directional communication between
+      // the Conversations SDK and service.
+      if (navigator.userAgent.indexOf("Chrome") > -1) {
+        window.Retool.modelUpdate({ browser: "Chrome" });
+      } else {
+        window.Retool.modelUpdate({ browser: "Not Chrome" });
+      }
+
+      // Initialize variables to be used inside of the window.Retool.subscribe function
+      var client;
+      var conversation;
+      var inboundListener;
+      var outboundMessage;
+      var inboundMessage;
+
+      // window.Retool.subscribe is evaluated whenever the Retool custom component model changes: https://docs.retool.com/docs/custom-components#non-react-javascript
+      window.Retool.subscribe(async function (model) {
+        if (model.token && !client && model.conversationsCleared) {
+          // If a chat token is passed into the model, and the Client object is not yet available...
+          client = new Twilio.Conversations.Client(model.token); // Instantiate a new Client: http://media.twiliocdn.com/sdk/js/conversations/releases/2.1.0/docs/#instantiating-and-using
+
+          // Set event handlers on the new Client which trigger log messages: http://media.twiliocdn.com/sdk/js/conversations/releases/2.1.0/docs/classes/Client.html#stateChanged
+          client.on("stateChanged", (state) => {
+            if (state === "failed") {
+              window.Retool.modelUpdate({
+                // Update the model with the error: https://docs.retool.com/docs/custom-components#non-react-javascript
+                error: "The client failed to initialize",
+              });
+            }
+
+            if (state === "initialized") {
+              window.Retool.modelUpdate({
+                status: "The client successfully initialized!",
+              });
+            }
+          });
+        }
+
+        // If the Client is initialized, a customer number has been passed to the model, and no inbound message listener has been defined...
+        if (client && model.customerNumber && !inboundListener) {
+          client.on("messageAdded", (message) => {
+            // When a message is added to the conversation: http://media.twiliocdn.com/sdk/js/conversations/releases/2.1.0/docs/classes/Client.html#messageAdded
+            if (
+              // If the message author is the customer, and we haven't processed the message already...
+              message.state.author === model.customerNumber &&
+              message.state.body != inboundMessage
+            ) {
+              // Push the message to the component model.
+              inboundMessage = message.state.body;
+              window.Retool.modelUpdate({ inbound: message.state.body });
+            }
+          });
+          inboundListener = true;
+        }
+
+        // If the Client is inititialized and no Conversation has been created...
+        if (client && !conversation) {
+          conversation = await client.createConversation(); // Create a Conversation: http://media.twiliocdn.com/sdk/js/conversations/releases/2.1.0/docs/classes/Client.html#createConversation
+          await conversation.join(); // Join the Conversation: http://media.twiliocdn.com/sdk/js/conversations/releases/2.1.0/docs/classes/Conversation.html#join
+          window.Retool.modelUpdate({ conversationSid: conversation.sid }); // Pass the Conversation SID to the component model
+        }
+
+        // If the Client and Conversations are initialized, there is an outbound message on the model, and we haven't procesed it yet...
+        if (
+          client &&
+          conversation &&
+          model.outbound &&
+          model.outbound != outboundMessage
+        ) {
+          outboundMessage = model.outbound;
+          await conversation.sendMessage(outboundMessage); // Send the message: http://media.twiliocdn.com/sdk/js/conversations/releases/2.1.0/docs/classes/Conversation.html#sendMessage
+        }
+      });
+    </script>
+  </head>
+  <body>
+    <p style="font-family:sans-serif;">Twilio Conversations Custom Component</p>
+  </body>
+</html>

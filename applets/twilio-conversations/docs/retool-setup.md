@@ -52,10 +52,10 @@ You may need to connect the Resource Queries in the Retool app with the Resource
 
 ## 6. Explore the Retool app
 
-If everything is working as expected, you should now be able to place outbound calls from the Retool app! The app is set up with a hardcoded table of "leads" to simulate a simple call center app. You can edit the contents of the leads table directly, or simply type your phone number in the field to try calling yourself.
+If everything is working as expected, you should now be able to send and receive messages between the Retool app and the phone number you registered! Enter your phone number in the "Customer number" field and click Submit to start chatting.
 
-## 5. Learn about how the custom component works
+## 7. Learn about how the custom component works
 
-You can read more about [Retool custom components](https://docs.retool.com/docs/custom-components). You can also view the code used in the Twilio Dialer component in Retool, the contents of which are included in [retool-custom-component.html](./code/retool/retool-custom-component.html) for easy reading!
+You can read more about [Retool custom components](https://docs.retool.com/docs/custom-components). You can also view the code used in the Twilio Conversations component in Retool, the contents of which are included in [retool-custom-component.html](./code/retool/retool-custom-component.html) for easy reading!
 
-Also, take 18 minutes to check out our [video walkthrough](https://youtu.be/xPSS3kp3XEI) of how this app is put together!
+Also, take 18 minutes to check out our [video walkthrough]() of how this app is put together!

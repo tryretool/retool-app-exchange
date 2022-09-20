@@ -50,7 +50,7 @@ In order for the embedded Twilio dialer to authenticate with Twilio's services, 
 2. Specify a path `voice-token`
 3. Set the function to `Public`. 
     - **Heads up! This means that anyone who can guess the URL of your function can issue valid access tokens. You would need to implement authentication on this endpoint for a production use-case!**
-4. Copy and paste the contents of [voice-token.js](./code/twilio-functions/voice-token.js) into the function and save
+4. Copy and paste the contents of [voice-token.js](/applets/twilio-dialer/code/twilio-functions/voice-token.js) into the function and save
 5. Copy the URL for this function for later use
 
 ## 7. Create a function to route outbound calls
@@ -60,7 +60,7 @@ In order for Twilio to know what to do when it receives a call from your app, yo
 1. Add a function
 2. Specify a path `twiml-app`
 3. Set the function to `Protected`
-4. Copy and paste the contents of [twiml-app.js](./code/twilio-functions/twiml-app.js) into the function and save
+4. Copy and paste the contents of [twiml-app.js](/applets/twilio-dialer/code/twilio-functions/twiml-app.js) into the function and save
 5. Copy the URL for this function for later use
 
 ## 8. Deploy your Twilio Service!

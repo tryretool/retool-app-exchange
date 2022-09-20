@@ -54,7 +54,7 @@ In order for the embedded Twilio Conversations client to authenticate with Twili
 2. Specify a path `chat_token`
 3. Set the function to `Public` 
     - **Heads up! This means that anyone who can guess the URL of your function can issue valid access tokens. You would need to implement authentication on this endpoint for a production use-case!**
-4. Copy and paste the contents of [chat_token.js](./code/twilio-functions/chat_token.js) into the function and save
+4. Copy and paste the contents of [chat_token.js](/applets/twilio-conversations/code/twilio-functions/chat_token.js) into the function and save
 5. Copy the URL for this function for later use
 
 ## 9. Deploy your Twilio Service!

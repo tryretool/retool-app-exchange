@@ -8,6 +8,7 @@ Each app consists of ready-to-use code that you can download and set up in your 
 
 
 ### 🛠 Updates
+* [Sep 2022] [Twilio Conversations](./applets/twilio-conversations) - An applet with an embeded Twilio Conversations client, enabling bi-directional messaging with an SMS client
 * [Aug 2022] [Snowflake: User Access Roles Review](./snowflake-uar-reviews/) - An app that allows managers and compliance teams to audit and review user access roles in Snowflake. 
 * [Jul 2022] [Twilio Dialer](./applets/twilio-dialer/) - An applet with an embedded Twilio dialer, enabling outbound voice calls
 * [May 2022] [Usage Viewer](./usage-viewer/) - An app that helps you identify top apps by pageviews and queries in your Retool instance 

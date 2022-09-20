@@ -19,8 +19,8 @@ As you go through the onboarding flow, indicate that you'll be building a messag
 
 ## 4. Create a Twilio Conversations Service
 [Create a Conversations Service](https://www.twilio.com/docs/conversations/api/service-resource) and note the `SID` for later.
-## 5. Create a Twilio Functions Service
 
+## 5. Create a Twilio Functions Service
 A [Twilio Service](https://www.twilio.com/docs/runtime/functions/create-service) is a container for the server-less functions which make it possible for your Retool app to get a chat access token.
 
 ## 6. Set Twilio Service environment variables
@@ -46,7 +46,7 @@ The server-less functions running in Twilio need access to a few software librar
 | `xmldom` | `0.1.27` |
 | `util` | `0.11.0` |
 
-## 8. Create a function to issue voice tokens
+## 8. Create a function to issue chat tokens
 
 In order for the embedded Twilio Conversations client to authenticate with Twilio's services, it needs a valid access token. To create a function for issuing chat tokens:
 

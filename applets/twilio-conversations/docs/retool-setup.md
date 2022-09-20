@@ -52,7 +52,11 @@ You may need to connect the Resource Queries in the Retool app with the Resource
 
 ## 6. Explore the Retool app
 
-If everything is working as expected, you should now be able to send and receive messages between the Retool app and the phone number you registered! Enter your phone number in the "Customer number" field and click Submit to start chatting.
+If everything is working as expected, you should now be able to send and receive messages between the Retool app and the phone number you registered! To use the app:
+
+1. In the "SMS Settings" box, enter the phone number you were assigned in step 0 of the Twilio setup.
+2. Enter the SMS-enabled phone number that you verified in step 1 of the Twilio setup and click Submit.
+3. Enter some text in the chat box and press "enter" to send!
 
 ## 7. Learn about how the custom component works
 

@@ -5,7 +5,7 @@ This applet demonstrates how to embed Twilio Conversations in a Retool app to en
 
 This serves as an example of how to use Retool [custom components](https://docs.retool.com/docs/custom-components) to add advanced functionality to your apps. You'd need to extensively modify the parts outside of the custom component to use it for anything real!
 
-If you'd just like a guided tour of how the applet works, check out our [video walkthrough (coming soon!)](). Otherwise, read on to learn how to set it up in your own environment!
+If you'd just like a guided tour of how the applet works, check out our [video walkthrough](https://www.youtube.com/watch?v=NL8liiIYN0o). Otherwise, read on to learn how to set it up in your own environment!
 <p align="center">
 <img src="./images/twilio-converations.png" width=75% height=75%>
 </p>

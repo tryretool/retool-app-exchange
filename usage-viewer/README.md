@@ -11,6 +11,8 @@ This data will help you properly allocate developer resources toward app-buildin
 ## Setup
 This app needs read access to [Retool's storage database](https://docs.retool.com/docs/configuring-retools-storage-database). Therefore, it's only suitable for use with self-hosted instances of Retool. 
 
+> :warning: **For a smooth app import experience, we recommend upgrading to Retool v2.96 or above.**
+
 ### 0. Make sure you have access!
 
 You should have the right approvals and know where to look to find the `POSTGRES_HOST`, `POSTGRES_PORT`, `POSTGRES_DB`, `POSTGRES_USER`, `POSTGRES_PASSWORD` environment variables in your deployment configuration. 

@@ -50,13 +50,13 @@ See the detailed setup guides in the [Setup Guides folder](./setup-guides).
 As an overview, these guides will take you through:
 
 1. Set up Snowflake
-[Step-by-step: Set up Snowflake](./set-up-snowflake.md)
+[Step-by-step: Set up Snowflake](./main/snowflake-uar-reviews/setup-guides/set-up-snowflake.md)
 
 2. Set up your Snowflake database as a Resource in Retool
-[Step-by-step: Set up Retool Resource](./set-up-retool-resource.md)
+[Step-by-step: Set up Retool Resource](./main/snowflake-uar-reviews/setup-guides/set-up-retool-resource.md)
 
 3. Set up the Retool app file
-[Step-by-step: Set up Retool App](./set-up-retool-app.md)
+[Step-by-step: Set up Retool App](./main/snowflake-uar-reviews/setup-guides/set-up-retool-app.md)
 
 
 

@@ -39,31 +39,25 @@ Create Review Cycle Admin Application
 <img src="./images/create_cycle_system_roles.png" alt="Manager Review Portal" style="width: 600px;">
 </p>
 
-## Technical Details + Setup
-1. Source the 3 applications from the retool/app-exchange repository: 
-    * Manager_Review_Portal.json
-    * Compliance_Review_Portal.json
-    * Create_Review_Cycle.json
+## Technical Details and Setup
+### Dependencies - backends
+The Snowflake User Access Roles Review app depends on the following backend services:
+- Snowflake
 
-2. Import the app "code" in Retool
-On your Retool home page, click "Create new" → "Create a new folder". Give this folder a name you like, e.g. "Snowflake User Access Reviews". Now, let's import the app. Click "Create new" → "Import an app". Upload the application .json files from step 1. 
+### How to set up Snowflake User Access Roles Review in your Retool instance
+See the detailed setup guides in the [Setup Guides folder](./setup-guides).
 
+As an overview, these guides will take you through:
 
+1. Set up Snowflake
+[Step-by-step: Set up Snowflake](./set-up-snowflake.md)
 
-3. Create the 4 tables used across the applications in your database: 
-    * _ACCESS_REVIEWS_
-    * _EMPLOYEES_
-    * _SYSTEM_ROLES_
-    * _REVIEW_CYCLES_
-4. Identify the employees and system roles for which we want to review:  
-    * The Create_Review_Cycle Retool application will allow you to manually input all the _EMPLOYEE_ and _SYSTEM_ROLES_ data required to generate the _ACCESS_REVIEWS_ table
-    * If this is your first time using the app, create a couple example employees, system roles, and then create a review cycle. Make sure that you're email address used to login to Retool is one of the employees and you are listed as the reviewer email in the employees tab of the Create_Review_Cycle application. 
-    * Alternatively, you can replace the _EMPLOYEE_ and _SYSTEM_ROLE_ tables with records from your existing ETL or database processes. Simply modify the createAccessReviews SQL in the Create_Review_Cycle application to point to the correct tables. 
-5. In the Create_Review_Cycle admin application, define a new review cycle
-    * This will first save a new record in the _REVIEW_CYCLE_ table and then create the _ACCESS_REVIEWS_ table that will be used in the Manager_Review_Portal and Compliance_Review_Portal applications. 
-6. Customize the application by introducing any necessary automations to the Compliance_Review_Portal  application. Examples include:
-    * Making an API request to create/update JIRA tickets 
-    * Making an API request to send a Slack notification in the compliance channel that the data is ready to be reviewed. 
+2. Set up your Snowflake database as a Resource in Retool
+[Step-by-step: Set up Retool Resource](./set-up-retool-resource.md)
+
+3. Set up the Retool app file
+[Step-by-step: Set up Retool App](./set-up-retool-app.md)
+
 
 
 ## How to contribute

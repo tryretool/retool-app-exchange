@@ -74,7 +74,7 @@ To do this, clone this Github repo: `git clone https://github.com/tryretool/reto
 On the [Retool main page](https://docs.retool.com/docs/protected-applications-getting-started#importing-the-application), click `Create new` and select `Import an app`. Upload the JSON file containing the app code, and name the app.
 
 ### 5. Rewire the Resource for each query 
-If the Usage Analytics app doesn't populate with data, it's likely you'll need to update the Resource for each qury. 
+If the Usage Analytics app doesn't populate with data, it's likely you'll need to update the Resource for each query. 
 
 To update the queries to use the correct Resource, load the Usage Analytics app in editor mode and open the bottom panel to view the queries. Edit each query and select your Retool Postgres database from the Resource dropdown. (Don't forget to save your queries after editing them!)
 

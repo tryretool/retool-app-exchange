@@ -26,8 +26,8 @@ In your new Twilio Service, set the following environment variables:
 | Key | Value |
 | ---- | ----  |
 | `TWIML_APPLICATION_SID` | The `TwiML App SID` you noted in step one |
-| `API_KEY` | The `SID` you noted in step two |
-| `API_SECRET` | The `Secret` you noted in step two |
+| `API_KEY_SID` | The `API Key SID` you noted in step two |
+| `API_KEY_SECRET` | The `API Key Secret` you noted in step two |
 | `CALLER_ID` | The phone number you noted in step zero. Make sure to include a `+` and the country code at the beginning! |
 
 ## 5. Configure Twilio Service dependencies

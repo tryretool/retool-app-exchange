@@ -5,12 +5,12 @@ exports.handler = function (context, event, callback) {
     const { ACCOUNT_SID } = context;
   
     // set these values in your .env file
-    const { TWIML_APPLICATION_SID, API_KEY, API_SECRET } = context;
+    const { TWIML_APPLICATION_SID, API_KEY_SID, API_KEY_SECRET } = context;
   
     const { AccessToken } = Twilio.jwt;
     const { VoiceGrant } = AccessToken;
   
-    const accessToken = new AccessToken(ACCOUNT_SID, API_KEY, API_SECRET);
+    const accessToken = new AccessToken(ACCOUNT_SID, API_KEY_SID, API_KEY_SECRET);
     accessToken.identity = IDENTITY;
     const grant = new VoiceGrant({
       outgoingApplicationSid: TWIML_APPLICATION_SID,

@@ -5,12 +5,12 @@ exports.handler = function (context, event, callback) {
     const { ACCOUNT_SID } = context;
   
     // set these values in your .env file
-    const { API_KEY, API_SECRET, SERVICE_SID } = context;
+    const { API_KEY_SID, API_KEY_SECRET, SERVICE_SID } = context;
   
     const { AccessToken } = Twilio.jwt;
     const { ChatGrant } = AccessToken;
   
-    const accessToken = new AccessToken(ACCOUNT_SID, API_KEY, API_SECRET);
+    const accessToken = new AccessToken(ACCOUNT_SID, API_KEY_SID, API_KEY_SECRET);
     accessToken.identity = IDENTITY;
     const grant = new ChatGrant({
       serviceSid: SERVICE_SID

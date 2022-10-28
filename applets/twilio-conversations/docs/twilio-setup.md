@@ -18,7 +18,7 @@ As you go through the onboarding flow, indicate that you'll be building a messag
 [Retrieve your Account SID and API Token](https://www.twilio.com/console/dev-tools/api-keys) from the Twilio admin console and note them for later.
 
 ## 4. Create a Twilio Conversations Service
-[Create a Conversations Service](https://www.twilio.com/docs/conversations/api/service-resource) and note the `SID` for later.
+[Create a Conversations Service](https://www.twilio.com/docs/conversations/api/service-resource) and note the `SID` for later. A Conversations Service is a top-level container for other resources in the Twilio Conversations REST API.
 
 ## 5. Create a Twilio Functions Service
 A [Twilio Service](https://www.twilio.com/docs/runtime/functions/create-service) is a container for the server-less functions which make it possible for your Retool app to get a chat access token.

@@ -30,7 +30,7 @@ In your new Twilio Service, set the following environment variables:
 
 | Key | Value |
 | ---- | ----  |
-| `SERVICE_SID` | The `Conversations SID` you noted in step three |
+| `CONVERSATIONS_SID` | The `Conversations SID` you noted in step three |
 | `API_KEY_SID` | The `SID` you noted in step one |
 | `API_KEY_SECRET` | The `Secret` you noted in step one |
 

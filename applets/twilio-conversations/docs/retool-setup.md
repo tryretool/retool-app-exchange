@@ -31,7 +31,8 @@ Your Twilio app will need to add SMS Participants to Conversations in order to c
 2. Select REST API as the resource type.
 3. Name the resource “Twilio Conversations - Participants”.
 4. Specify `https://conversations.twilio.com/v1/Conversations/` as the Base URL.
-5. Select `Basic Auth` and provide your Twilio Account SID as the `Username` and your Auth Token as the `Password`.
+5. Select `Basic Auth` and provide your Twilio API Key SID as the `Username` and your Twilio API Key Secret as the `Password`.
+    - These credentials were created in Step 2 of the [Twilio Setup](twilio-setup.md).
 6. Save your changes.
 
 ## 4. Download the Retool app code

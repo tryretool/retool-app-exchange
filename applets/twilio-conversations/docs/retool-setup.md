@@ -35,8 +35,8 @@ You may need to connect the Resource Queries in the Retool app with the Resource
 
 | Folder | Resource Query | Resource |
 | --- | --- | --- |
-| gets | getConversations | Twilio Conversations API |
 | gets | getChatToken | Twilio Conversations Chat Token |
+| gets | getConversations | Twilio Conversations API |
 | writes | addParticipant | Twilio Conversations API |
 | writes | deleteConversations | Twilio Conversations API |
 

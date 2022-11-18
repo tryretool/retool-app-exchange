@@ -44,7 +44,7 @@ You may need to connect the Resource Queries in the Retool app with the Resource
 
 If everything is working as expected, you should now be able to send and receive messages between the Retool app and the phone number you registered! To use the app:
 
-1. When first loading teh app, you'll be prompted to enter your Twilio Conversations Service SID. This is the Serivce SID you retrieved in step 3 of the Twilio setup.
+1. When first loading the app, you'll be prompted to enter your Twilio Conversations Service SID. This is the Serivce SID you retrieved in step 3 of the Twilio setup.
 2. Once the app has initialized, fill out the SMS settings: the "SMS Settings" box,    
     - Enter the phone number you were assigned in step 0 of the Twilio setup as "Twilio Outbound number".
     - Enter the SMS-enabled phone number that you verified in step 1 of the Twilio setup as "Customer number" and click Submit.

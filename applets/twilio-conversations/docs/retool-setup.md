@@ -15,7 +15,7 @@ In order for your Retool app to authenticate with Twilio, you'll need to get a v
 
 ## 2. Create a Twilio API Resource to manage Conversations and Participants
 
-Your Twilio app will need to delete previously created Conversations in order to start new Conversations with the same SMS number. To set this up:
+Your Retool app will need to delete previously created Conversations in order to start new Conversations with the same SMS number, as well as add new participants to the Conversation. To set this up:
 
 1. Navigate to the `/resources` page in your instance and click "Create a new resource". 
 2. Select Twilio as the resource type.

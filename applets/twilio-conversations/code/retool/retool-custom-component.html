@@ -42,8 +42,9 @@
 
       // window.Retool.subscribe is evaluated whenever the Retool custom component model changes: https://docs.retool.com/docs/custom-components#non-react-javascript
       window.Retool.subscribe(async function (model) {
+        
+        // If a chat token is passed into the model, and the Client object is not yet available...
         if (model.token && !client && model.conversationsCleared) {
-          // If a chat token is passed into the model, and the Client object is not yet available...
           client = new Twilio.Conversations.Client(model.token); // Instantiate a new Client: http://media.twiliocdn.com/sdk/js/conversations/releases/2.1.0/docs/#instantiating-and-using
 
           // Set event handlers on the new Client which trigger log messages: http://media.twiliocdn.com/sdk/js/conversations/releases/2.1.0/docs/classes/Client.html#stateChanged
@@ -63,6 +64,14 @@
           });
         }
 
+        // If the Client is inititialized and no Conversation has been created...
+        if (client && !conversation) {
+          conversation = "initializing";
+          conversation = await client.createConversation(); // Create a Conversation: http://media.twiliocdn.com/sdk/js/conversations/releases/2.1.0/docs/classes/Client.html#createConversation
+          await conversation.join(); // Join the Conversation: http://media.twiliocdn.com/sdk/js/conversations/releases/2.1.0/docs/classes/Conversation.html#join
+          window.Retool.modelUpdate({ conversationSid: conversation.sid }); // Pass the Conversation SID to the component model
+        }
+
         // If the Client is initialized, a customer number has been passed to the model, and no inbound message listener has been defined...
         if (client && model.customerNumber && !inboundListener) {
           client.on("messageAdded", (message) => {
@@ -78,13 +87,6 @@
             }
           });
           inboundListener = true;
-        }
-
-        // If the Client is inititialized and no Conversation has been created...
-        if (client && !conversation) {
-          conversation = await client.createConversation(); // Create a Conversation: http://media.twiliocdn.com/sdk/js/conversations/releases/2.1.0/docs/classes/Client.html#createConversation
-          await conversation.join(); // Join the Conversation: http://media.twiliocdn.com/sdk/js/conversations/releases/2.1.0/docs/classes/Conversation.html#join
-          window.Retool.modelUpdate({ conversationSid: conversation.sid }); // Pass the Conversation SID to the component model
         }
 
         // If the Client and Conversations are initialized, there is an outbound message on the model, and we haven't procesed it yet...

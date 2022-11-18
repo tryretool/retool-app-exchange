@@ -22,6 +22,7 @@ Your Retool app will need to delete previously created Conversations in order to
 3. Name the resource "Twilio Conversations API".
 4. Specify your Twilio API Key SID as the value of `Account SID` and your Twilio API Key Secret as the value of `Auth Token`.
     - These credentials were created in Step 2 of the [Twilio Setup](twilio-setup.md).
+    - The current version the Twilio resource doesn't correctly validate API Keys, so the "test connection" button won't work on the Resource configuration screen.
 5. Save your changes.
 
 ## 3. Download the Retool app code

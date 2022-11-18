@@ -13,33 +13,22 @@ In order for your Retool app to authenticate with Twilio, you'll need to get a v
 5. Specify a header with a key of `identity` and a value of `{{current_user.email}}`. This is used to pass the email address of the Retool user to Twilio for use in the token identity.
 6. Save your changes.
 
-## 2. Create a Twilio API Resource to get and delete Conversations
+## 2. Create a Twilio API Resource to manage Conversations and Participants
 
 Your Twilio app will need to delete previously created Conversations in order to start new Conversations with the same SMS number. To set this up:
 
 1. Navigate to the `/resources` page in your instance and click "Create a new resource". 
 2. Select Twilio as the resource type.
 3. Name the resource "Twilio Conversations API".
-4. Specify the `Account SID` and `Auth Token` you retrieved in Step 3 of the [Twilio Setup](twilio-setup.md).
+4. Specify your Twilio API Key SID as the value of `Account SID` and your Twilio API Key Secret as the value of `Auth Token`.
+    - These credentials were created in Step 2 of the [Twilio Setup](twilio-setup.md).
 5. Save your changes.
 
-## 3. Create a Retool REST API resource to add Participants to Conversations
-
-Your Twilio app will need to add SMS Participants to Conversations in order to communicate with an SMS client. This step is necessary as adding Participants is not fully supported in the version of the Twilio OpenAPI spec integrated with Retool. To set this up:
-
-1. Navigate to the `/resources` page in your instance and click "Create a new resource." 
-2. Select REST API as the resource type.
-3. Name the resource “Twilio Conversations - Participants”.
-4. Specify `https://conversations.twilio.com/v1/Conversations/` as the Base URL.
-5. Select `Basic Auth` and provide your Twilio API Key SID as the `Username` and your Twilio API Key Secret as the `Password`.
-    - These credentials were created in Step 2 of the [Twilio Setup](twilio-setup.md).
-6. Save your changes.
-
-## 4. Download the Retool app code
+## 3. Download the Retool app code
 
 Download [twilio-conversations-retool-app.json](/applets/twilio-conversations/code/retool/twilio-conversations-retool-app.json) from this repository.
 
-## 5. Import the Retool app code
+## 4. Import the Retool app code
 On the [Retool main page](https://docs.retool.com/docs/protected-applications-getting-started#importing-the-application), click `Create new` and select `Import an app`. Upload the JSON file containing the app code, and name the app.
 
 You may need to connect the Resource Queries in the Retool app with the Resources you created in the previous steps: 
@@ -48,18 +37,20 @@ You may need to connect the Resource Queries in the Retool app with the Resource
 | --- | --- | --- |
 | gets | getConversations | Twilio Conversations API |
 | gets | getChatToken | Twilio Conversations Chat Token |
-| writes | addParticipant | Twilio Conversations - Participants |
+| writes | addParticipant | Twilio Conversations API |
 | writes | deleteConversations | Twilio Conversations API |
 
-## 6. Explore the Retool app
+## 5. Explore the Retool app
 
 If everything is working as expected, you should now be able to send and receive messages between the Retool app and the phone number you registered! To use the app:
 
-1. In the "SMS Settings" box, enter the phone number you were assigned in step 0 of the Twilio setup.
-2. Enter the SMS-enabled phone number that you verified in step 1 of the Twilio setup and click Submit.
-3. Enter some text in the chat box and press "enter" to send!
+1. When first loading teh app, you'll be prompted to enter your Twilio Conversations Service SID. This is the Serivce SID you retrieved in step 3 of the Twilio setup.
+2. Once the app has initialized, fill out the SMS settings: the "SMS Settings" box,    
+    - Enter the phone number you were assigned in step 0 of the Twilio setup as "Twilio Outbound number".
+    - Enter the SMS-enabled phone number that you verified in step 1 of the Twilio setup as "Customer number" and click Submit.
+4. Enter some text in the chat box and press "enter" to send!
 
-## 7. Learn about how the custom component works
+## 6. Learn about how the custom component works
 
 You can read more about [Retool custom components](https://docs.retool.com/docs/custom-components). You can also view the code used in the Twilio Conversations component in Retool, the contents of which are included in [retool-custom-component.html](/applets/twilio-conversations/code/retool/retool-custom-component.html) for easy reading!
 

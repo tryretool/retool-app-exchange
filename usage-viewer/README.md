@@ -45,6 +45,9 @@ GRANT SELECT ON users TO <YOUR_READ_ONLY_USER>;
 GRANT SELECT ON audit_trail_events TO <YOUR_READ_ONLY_USER>;
 GRANT SELECT ON groups to <YOUR_READ_ONLY_USER>;
 GRANT SELECT ON resources to <YOUR_READ_ONLY_USER>;
+GRANT SELECT ON groups to <YOUR_READ_ONLY_USER>;
+GRANT SELECT ON resources to <YOUR_READ_ONLY_USER>;
+GRANT SELECT ON organizations to <YOUR_READ_ONLY_USER>;
 ```
 
 ## 2. Connect the Retool Postgres DB as a Resource

@@ -11,7 +11,7 @@ The instructions below are outlined within the Retool application. You can impor
 
 ### 0. Make sure you have the proper flags enabled
 
-This is only for customers who have our [Retool Embed](https://retool.com/products/embed) enabled. If you don't have it, but are interested in learning more, use [this link](https://retool.com/products/embed) to book some time with our team!
+This is only for customers who have [Retool Embed](https://retool.com/products/embed) enabled. If you don't have it, but are interested in learning more, use [this link](https://retool.com/products/embed) to book a demo with our team.
 
 ### 1. Set up API with Embed Scope
 

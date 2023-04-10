@@ -7,7 +7,7 @@ If you are using [Retool's Embed](https://docs.retool.com/docs/retool-embed), we
 <img src="./images/6_embed_url_app.png" >
 
 ## Setup
-All of the setup steps are outlined within the application itself, as well as below. Once you set the below up, you can jump to the sixth step within the application.
+The instructions below are outlined within the Retool application. You can import the app and continue in Retool, or follow along below. Once set up, skip to Step 6 to begin using the application.
 
 ### 0. Make sure you have the proper flags enabled
 

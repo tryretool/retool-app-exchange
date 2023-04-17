@@ -8,6 +8,7 @@ Each app consists of ready-to-use code that you can download and set up in your 
 
 
 ### 🛠 Updates
+* [Apr 2023] [Embed URL Generator](./embed-url-generator) - An app for customers of [Retool Embed](https://retool.com/products/embed) that lets you preview embedded Retool apps with different metadata and other parameters. 
 * [Sep 2022] [Twilio Conversations](./applets/twilio-conversations) - An applet with an embeded Twilio Conversations client, enabling bi-directional messaging with an SMS client
 * [Aug 2022] [Snowflake: User Access Roles Review](./snowflake-uar-reviews/) - An app that allows managers and compliance teams to audit and review user access roles in Snowflake. 
 * [Jul 2022] [Twilio Dialer](./applets/twilio-dialer/) - An applet with an embedded Twilio dialer, enabling outbound voice calls

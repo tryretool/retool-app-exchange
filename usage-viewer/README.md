@@ -11,7 +11,7 @@ This data will help you properly allocate developer resources toward app-buildin
 ## Setup
 This app needs read access to [Retool's storage database](https://docs.retool.com/docs/configuring-retools-storage-database). Therefore, it's only suitable for use with self-hosted instances of Retool. 
 
-> :warning: **For a smooth app import experience, we recommend upgrading to Retool v2.96 or above.**
+> :warning: **For a smooth app import experience, we recommend upgrading to Retool v2.116 or later.**
 
 ### 0. Make sure you have access!
 

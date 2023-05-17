@@ -1,6 +1,6 @@
 # Embed URL Generator / Embedded App Tester
 
-If you are using [Retool's Embed](https://docs.retool.com/docs/retool-embed), we've created a Retool application that lets you preview how your embedded Retool app will look and behave within your parent application.
+If you are using [Retool Embed](https://docs.retool.com/docs/retool-embed), we've created a Retool application that lets you preview how your embedded Retool app will look and behave within your parent application.
 
 **Note**: We recommend using this application in *Incognito Mode* in your browser, to prevent conflicts between the sample embedded user and your original Retool login. We also recommend reading the docs linked above before using, especially the parts about passing in [metadata.](https://docs.retool.com/docs/embed-retool-apps#control-access-and-app-behavior-with-metadata)
 

@@ -11,7 +11,7 @@ This data will help you properly allocate developer resources toward app-buildin
 ## Setup
 This app needs read access to [Retool's storage database](https://docs.retool.com/docs/configuring-retools-storage-database). Therefore, it's only suitable for use with self-hosted instances of Retool. 
 
-> :warning: **For a smooth app import experience, we recommend upgrading to Retool v2.116 or later.**
+> :warning: **For a smooth app import experience, we recommend upgrading to Retool v2.116 or later. If you are using [Spaces](https://docs.retool.com/org-users/guides/configure-spaces), you must be on version 3.18 or above.**
 
 ### 0. Make sure you have access!
 
@@ -71,7 +71,7 @@ Download the app code from the `/code` directory in this repository.
 
 To do this, clone this Github repo: `git clone https://github.com/tryretool/retool-app-exchange.git` 
 
-(Alternatively, you can manually download `usage_analytics.json` from the [`code/`](../code) directory.)
+**Note**: If you are using Spaces and are on version v3.18 and above, download `usage_analytics_spaces.json` from the ['code/](..code) directory. 
 
 ### 4. Import the app code
 On the [Retool main page](https://docs.retool.com/docs/protected-applications-getting-started#importing-the-application), click `Create new` and select `Import an app`. Upload the JSON file containing the app code, and name the app.

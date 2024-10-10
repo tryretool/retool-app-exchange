@@ -50,6 +50,8 @@ GRANT SELECT ON groups to <YOUR_READ_ONLY_USER>;
 GRANT SELECT ON resources to <YOUR_READ_ONLY_USER>;
 GRANT SELECT ON organizations to <YOUR_READ_ONLY_USER>;
 GRANT SELECT ON workflow_save to <YOUR_READ_ONLY_USER>;
+GRANT SELECT ON workflow to <YOUR_READ_ONLY_USER>;
+GRANT SELECT ON workflow_run to <YOUR_READ_ONLY_USER>;
 ```
 
 ## 2. Connect the Retool Postgres DB as a Resource
